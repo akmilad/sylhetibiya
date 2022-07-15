@@ -1,0 +1,31 @@
+.pink-bg {
+    background-color: var(--primary-color);
+}
+
+.blue-bg {
+    background-color: var(--secondery-color);
+}
+
+.primary-bg {
+    background: var(--primary-color) !important;
+}
+
+.pink-text {
+    color: var(--primary-color);
+}
+
+.blue-text {
+    color: var(--secondery-color);
+}
+
+.whatsapp-bg {
+    background-color: #41BB50;
+}
+
+.fb-bg {
+    background-color: #1771E6;
+}
+
+.add-bg {
+    background-color: var(--primary-color);
+}
