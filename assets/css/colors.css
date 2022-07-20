@@ -14,6 +14,10 @@
     color: var(--primary-color);
 }
 
+.white-text {
+    color: var(--white);
+}
+
 .blue-text {
     color: var(--secondery-color);
 }

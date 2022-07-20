@@ -7,9 +7,11 @@
 
 
 @font-face {
-	font-family: 'Hind Siliguri', sans-serif;
+	font-family: 'Hind Siliguri';
+	font-family: 'Noto Sans Bengali';
 	src: url('../font/HindSiliguri-Regular.ttf');
-	/* 
+	src: url('../font/NotoSansBengali_Condensed-SemiBold.ttf')
+		/* 
 	font-weight: normal;
 	font-style: normal; */
 }
@@ -39,6 +41,20 @@ body {
 
 
 /* Global Style  */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+select {
+	font-family: 'Noto Sans Bengali', sans-serif;
+}
+
 .section-title {
 	position: relative;
 	padding: 4px 16px;
@@ -74,10 +90,15 @@ body {
 	background-color: #f6faff;
 	padding: 12px 0px;
 	box-shadow: 0px 4px 5px rgb(100 143 195 / 20%);
+	height: 70px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	transition: all .3s;
 }
 
 .top_bar {
-
 	border-radius: 0px 0px 6px 6px;
 }
 
@@ -88,10 +109,60 @@ body {
 	justify-content: right;
 }
 
+.social-media-icon {
+	height: 35px;
+	width: 35px;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	font-size: 20px;
+	position: relative;
+	isolation: isolate;
+	overflow: hidden;
+	transition: all .3s;
+	box-shadow: 1px 1px 1.5px 0.05px;
+}
 
-.top-bar-icon img {
-	width: 20px;
+.social-media-icon.whatsApp {
+	color: #41BB50;
+}
 
+.social-media-icon.facebook {
+	color: #1771E6;
+}
+
+.social-media-icon::before {
+	position: absolute;
+	content: '';
+	z-index: -1;
+	width: 10%;
+	height: 0%;
+	top: 0;
+	border-radius: 100%;
+	transition: all .3s;
+}
+
+.social-media-icon.whatsApp::before {
+	background-color: #41BB50;
+}
+
+.social-media-icon.facebook::before {
+	background-color: #1771E6;
+}
+
+.social-media-icon:hover {
+	color: #fff;
+}
+
+.social-media-icon:hover:before {
+	width: 100%;
+	height: 100%;
+}
+
+.emergeny-notice {
+	margin-top: 70px;
 }
 
 .marquee {
@@ -130,6 +201,7 @@ body {
 	text-decoration: underline;
 }
 
+.carousel-item {}
 
 .carousel-item::before {
 	content: '';
@@ -139,6 +211,23 @@ body {
 	background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
 }
 
+.carousel-indicators [data-bs-target] {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	transition: all .4s;
+}
+
+.carousel-indicators .active {
+	opacity: 1;
+	transform: scale(1.4);
+	border: 2px solid rgba(255, 255, 255, 1);
+	background-color: transparent;
+
+}
+
+/* Banner Content */
 .banner_title {
 	color: var(--white);
 }
@@ -174,11 +263,11 @@ body {
 }
 
 .default-btn.login-btn {
-	border-radius: 6px 0px 0px 6px;
+	border-radius: 20px 0px 20px 0px;
 }
 
 .default-btn.regi-btn {
-	border-radius: 0px 6px 6px 0px;
+	border-radius: 0px 20px 0px 20px;
 }
 
 .default-btn span {
@@ -239,39 +328,136 @@ body {
 }
 
 /* button */
+/* Search Box */
+.multi-search {
+	position: relative;
+	background-attachment: fixed;
+	isolation: isolate;
+	background-size: cover;
+	background-position: center;
+}
 
+.multi-search .data-input {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+.multi-search::before {
+	position: absolute;
+	content: '';
+	inset: 0;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.search-box {
+	background-color: #fff;
+	border: 1px solid #000;
+	border-radius: 10px;
+
+}
+
+/* Search Box */
 
 
 
 
 /* Carousel Content */
-.item {
+#highlight-slider .owl-item.active {
+	width: 300px !important;
+}
+
+#ads-slider .owl-item.active {
+	width: 420px !important;
+}
+
+#highlight-slider .item {
 
 	box-shadow: 0px 0px 3px -1px #999;
 	margin-top: 2px;
 	margin-bottom: 2px;
 }
 
+#ads-slider .item {
+	box-shadow: 0px 0px 3px -1px #999;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height: 230px;
+}
+
+#ads-slider .carousel-content {
+	height: 100%;
+}
+
+#ads-slider .carousel-content img {
+	height: 100%;
+}
+
 .owl-stage {
 	width: 10000px !important;
 }
 
-.owl-item.active {
-	width: 300px !important;
-}
 
 .user-contact {
-	display: flex !important;
-	align-items: center;
-	justify-content: space-around;
+	column-gap: 15px;
 }
 
+.user-contact .profile-image {
+	width: 40%;
+}
+
+.user-contact .profile-image img {
+	height: 100px;
+	width: 100%;
+	border-radius: 10%;
+	/* border: 2px solid var(--primary-color); */
+}
+
+.user-contact .user-text {
+	width: 60%;
+	position: relative;
+}
+
+.profile_info {
+	list-style: none;
+
+}
+
+.profile_info li {
+	margin: 2px 0;
+}
+
+.profile_info li b {
+	color: var(--primary-color);
+	font-weight: 400;
+}
+
+.profile_info li span {
+	color: rgb(0 24 52 / 90%);
+}
+
+.profile_info li b:nth-of-type(2) {
+	margin-left: 20px;
+}
+
+
+
+/* .user-contact .user-text::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 2px;
+	background-color: #000;
+
+
+} */
+
 .carousel-content .contact-item {
-	height: 40px;
-	width: 40px;
+	height: 25px;
+	width: 25px;
 	border-radius: 100%;
 	box-shadow: 0px 0px 2px #999;
-	font-size: 20px;
+	font-size: 14px;
 }
 
 .carousel-content .contact-item a {
@@ -282,6 +468,7 @@ body {
 	height: 80px !important;
 	width: 80px !important;
 }
+
 
 
 /* Hover to Show Animated Title */
@@ -338,6 +525,75 @@ body {
 /* Hover to Show Animated Title */
 /* Carousel Content */
 
+
+/* Tab Content  */
+.card {
+	border: none;
+	border-radius: .25rem;
+	box-shadow: 1px 1px 2px 2px #efefef;
+	background: rgb(248 251 255 / 50%);
+}
+
+.user-profile a {
+	text-decoration: none;
+}
+
+.user-profile .user-img {}
+
+.user-profile .user-img img {
+	height: 160px;
+	width: 160px;
+	overflow: hidden;
+	border-radius: 10%;
+	box-shadow: 0px 0px 4px 1px #999;
+}
+
+
+
+/* Footer */
+.footer {
+	background-color: var(--primary-color);
+}
+
+.footer li {
+	margin-left: 22px;
+	position: relative;
+
+}
+
+.footer li a:hover {
+	text-decoration: underline;
+}
+
+.footer li::before {
+	font: var(--fa-font-solid);
+	content: '\f101';
+	position: absolute;
+	color: #9cc9ff;
+	font-size: 12px;
+	left: -18px;
+	top: 6px;
+}
+
+.footer i {
+	font-size: 12px;
+	color: #fff;
+}
+
+.footer a {
+	color: #fff;
+
+	text-decoration: none;
+}
+
+/* Footer */
+
+/* copyright */
+.copyright {
+	background-color: var(--secondery-color)
+}
+
+/* copyright */
 
 /* Reveal Effect */
 .reveal {

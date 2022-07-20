@@ -1,4 +1,20 @@
 
+// Sticky Top bar
+var lastScrollTop = 0;
+navbar = document.getElementById("topBar");
+window.addEventListener("scroll", function () {
+  var scrollTop = window.pageYOffset || document
+    .documentElement.scrollTop;
+  if (scrollTop > lastScrollTop) {
+    navbar.style.top = "-70px";
+  }
+  else {
+    navbar.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+})
+// Sticky Top bar
+
 
 // bootstrap Slider
 var myCarousel = document.querySelector('#myCarousel')
@@ -12,6 +28,36 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 if ($('#highlight-slider').length > 0) {
   $('#highlight-slider').owlCarousel({
     nav: true,
+    margin: 15,
+    reponsiveClass: true,
+    dots: false,
+    loop: true,
+    navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
+    // autoplayHoverPause: true,
+    responsive: {
+      // breakpoint from 0 up
+      0: {
+        items: 2,
+      },
+
+      // breakpoint from 768 up
+      768: {
+        items: 3,
+      },
+      // breakpoint from 991 up
+      991: {
+        items: 4,
+      }
+    }
+  });
+}
+// Owl Carousel  highlight-slider ///
+
+
+// Owl Carousel highlight-slider ///
+if ($('#ads-slider').length > 0) {
+  $('#ads-slider').owlCarousel({
+    nav: true,
     items: 4,
     margin: 15,
     reponsiveClass: true,
@@ -22,16 +68,16 @@ if ($('#highlight-slider').length > 0) {
     responsive: {
       // breakpoint from 0 up
       0: {
-        items: 1,
+        items: 2,
       },
 
       // breakpoint from 768 up
       768: {
         items: 2,
       },
-      // breakpoint from 768 up
-      1200: {
-        items: 4,
+      // breakpoint from 991 up
+      991: {
+        items: 3,
       }
     }
   });
@@ -122,26 +168,8 @@ function reveal() {
 // Scroll to Reveal
 
 
-// Video PopUp
-var modal = document.getElementById('myModal');
 
-var btn = document.getElementById("myBtn");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
-  modal.style.display = "block";
-}
-
-span.onclick = function () {
-  modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-// Video PopUp
-
+$(document).ready(function () {
+  $('#Occupation').select2();
+});
 

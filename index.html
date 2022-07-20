@@ -12,19 +12,21 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/slick-theme.css">
 
-	<link rel="icon" href="images/apple-touch-icon-72x72-precomposed.png">
+	<!-- <link rel="icon" href="images/apple-touch-icon-72x72-precomposed.png"> -->
 	<link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/reveal/aos.css">
 	<link rel="stylesheet" href="assets/css/colors.css">
+	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
+
 </head>
 
 
 <body>
-	<section class="top-bar-main pt-2 pb-2">
+	<section id="topBar" class="top-bar-main pt-2 pb-2">
 		<div class="container">
 			<div class="top_bar">
 				<div class="row">
@@ -35,17 +37,14 @@
 					</div>
 					<div class="col-md-4 col-6 ">
 						<div class="top-bar-icon">
-							<div class="whtasapp icon me-3">
-								<a href="#">
-									<img src="assets/images/WhatsApp.svg.png" alt="">
-								</a>
-							</div>
-							<div class="facebook icon me-3">
-								<a href="#">
-									<img src="assets/images/Facebook_f_logo_(2021).svg.png" alt="">
-								</a>
 
-							</div>
+							<a href="#" class="whatsApp social-media-icon mx-1" aria-label="Facebook">
+								<i class="fa-brands fa-whatsapp"></i>
+							</a>
+
+							<a href="#" class="facebook social-media-icon mx-1" aria-label="LinkedIn">
+								<i class="fa-brands fa-facebook-f"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -63,7 +62,7 @@
 
 						</div>
 						<div class="marquee-slide w-100">
-							<marquee class="d-flex" behavior="scrool" direction="left" onmouseover="this.stop()"
+							<marquee class="d-flex" behavior="scroll" direction="left" onmouseover="this.stop()"
 								scrollamount="5" onmouseout="this.start()">
 								<a href="#"> <span class="fa-regular fa-circle pe-1"> </span> কম্পিউটার প্রোগামার অনুপম
 									তালুকদারের জন্য বিদেশি বউ
@@ -85,7 +84,7 @@
 	<section class="slider">
 		<div class="carousel slide">
 			<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-				<!-- <div class="carousel-indicators">
+				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
 						class="active" aria-current="true" aria-label="Slide 1"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
@@ -93,26 +92,44 @@
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
 						aria-label="Slide 3"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-						aria-label="Slide 3"></button>
+						aria-label="Slide 4"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-						aria-label="Slide 3"></button>
+						aria-label="Slide 5"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
-						aria-label="Slide 3"></button>
-				</div> -->
+						aria-label="Slide 6"></button>
+				</div>
 				<div class="carousel-inner" id="myCarousel">
 					<div class="carousel-item active"
-						style="background-image: url(assets/images/banner/banner1.jpg); height: 300px; background-size: cover; background-position: center;">
+						style="background-image: url(assets/images/banner/banner1.jpg); height: 450px; background-size: cover; background-position: center;">
 					</div>
 
 					<div class="carousel-item"
-						style="background-image: url(assets/images/banner/banner2.jpg); height: 300px; background-size: cover; background-position: center;">
+						style="background-image: url(assets/images/banner/banner2.jpg); height: 450px; background-size: cover; background-position: center;">
 						<div class="img-tag">
 
 						</div>
 					</div>
 
 					<div class="carousel-item"
-						style="background-image: url(assets/images/banner/banner3.jpg); height: 300px; background-size: cover; background-position: center;">
+						style="background-image: url(assets/images/banner/banner3.jpg); height: 450px; background-size: cover; background-position: center;">
+						<div class="img-tag">
+
+						</div>
+					</div>
+					<div class="carousel-item"
+						style="background-image: url(assets/images/banner/banner4.jpg); height: 450px; background-size: cover; background-position: center;">
+						<div class="img-tag">
+
+						</div>
+					</div>
+					<div class="carousel-item"
+						style="background-image: url(assets/images/banner/banner5.jpg); height: 450px; background-size: cover; background-position: center;">
+						<div class="img-tag">
+
+						</div>
+					</div>
+					<div class="carousel-item"
+						style="background-image: url(assets/images/banner/banner3.jpg); height: 450px; background-size: cover; background-position: center;">
 						<div class="img-tag">
 
 						</div>
@@ -148,7 +165,9 @@
 	</section>
 
 
-	<section class="content-slider mt-3">
+
+
+	<section class="content-slider py-3 mt-3">
 		<div class="container">
 			<div class="slider-block" style="padding: 8px; box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);">
 				<div class="title-div">
@@ -161,235 +180,305 @@
 								<div id="highlight-slider" class="owl-carousel owl-theme">
 									<div class="item item1">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp">
+																<i class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 									<div class="item item2">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 									<div class="item item3">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 									<div class="item item4">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 									<div class="item item5">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 
 									<div class="item item6">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 
-									<div class="item item6">
+									<div class="item item7">
 										<div class="carousel-content p-3">
-											<h5 class="post-title">
+											<h5 class="post-title blue-text">
 												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> নামঃ সৌমিত্র চক্রবর্তী, বয়সঃ ২৭, ধর্মঃ ইসলাম।
-											</p>
-											<div class="user-contact d-flex pt-3">
-												<div class="image contact-item overflow-hidden">
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
 													<a href="#">
 														<img src="assets/images/user/user1.jpg">
 													</a>
 												</div>
-												<div
-													class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg">
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
 
-													<a href="#" titl="WhatsApp"> <i class="fa-brands fa-whatsapp"></i>
-													</a>
-												</div>
-												<div
-													class="fb contact-item d-flex justify-content-center align-items-center fb-bg">
-													<a href="#" titl="Facebok"> <i class="fa-brands fa-facebook-f"></i>
-													</a>
-												</div>
-												<div
-													class="send-request contact-item d-flex justify-content-center align-items-center add-bg">
-													<a href="#" titl="Click to Send Request"> <i
-															class="fa-solid fa-user-plus"></i>
-													</a>
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
 												</div>
 											</div>
+
 										</div>
 									</div>
 
@@ -404,7 +493,85 @@
 		</div>
 	</section>
 
-	<section class="content-slider mt-3">
+	<section class="multi-search py-5" style="background-image: url(assets/images/banner/banner3.jpg);">
+		<div class="container">
+			<div class="row">
+				<div class="col-10 offset-1">
+					<form class="search-box p-3" action="">
+						<h4 class="text-center m-0 mb-2"> আপনার জীবন সঙ্গী খুজুন </h4>
+						<div class="data-input">
+							<div class="gender">
+								<label for="">লিঙ্গ- </label> <br>
+								<select id="Gender">
+									<option class="cls" selected> কনে </option>
+									<option> বর </option>
+								</select>
+							</div>
+							<div class="age ">
+								<label for="">বয়স- </label> <br>
+								<div class="age-input d-flex">
+									<select id="CtgSelect" class="inputState">
+										<option class="cls" selected> ১৮ </option>
+										<option> ১৯ </option>
+										<option> ২০ </option>
+										<option> ২১ </option>
+										<option> ২২ </option>
+										<option> ২৩ </option>
+										<option> ২৪ </option>
+										<option> ২৫ </option>
+										<option> ২৬ </option>
+										<option> ২৭ </option>
+										<option> ২৮ </option>
+									</select>
+									<span class="mx-2"> থেকে </span>
+									<select id="CtgSelect" class="inputState">
+										<option class="cls" selected> ১৮ </option>
+										<option> ১৯ </option>
+										<option> ২০ </option>
+										<option> ২১ </option>
+										<option> ২২ </option>
+										<option> ২৩ </option>
+										<option> ২৪ </option>
+										<option> ২৫ </option>
+										<option> ২৬ </option>
+										<option> ২৭ </option>
+										<option> ২৮ </option>
+									</select>
+								</div>
+							</div>
+							<div class="relogion">
+								<label for="">বয়স- </label> <br>
+								<div class="relogion-input">
+									<select id="Religion" class="inputState">
+										<option class="cls" selected> মুসলিম </option>
+										<option> হিন্দু </option>
+										<option> খ্রিষ্টান </option>
+										<option> বৌধ্য </option>
+										<option> অন্যান্য </option>
+									</select>
+								</div>
+							</div>
+							<div class="occupation">
+								<label for="">পেশা- </label> <br>
+								<div class="relogion-input">
+									<select id="Occupation" class="inputState">
+										<option class="cls" selected> সিলেক্ট করুন </option>
+										<option> সরকারী চাকুরী </option>
+										<option> বেসরকারী চাকুরী </option>
+										<option> শিক্ষক </option>
+										<option> ফ্রিল্যান্সার </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="content-slider py-3 mt-3">
 		<div class="container">
 			<div class="slider-block" style="padding: 8px; box-shadow: 0px 0px 2px rgba(0, 0, 0, .2);">
 				<div class="title-div">
@@ -414,77 +581,272 @@
 					<section id="demos">
 						<div class="row">
 							<div class="large-12 columns">
-								<div id="highlight-slider" class="owl-carousel owl-theme">
-									<div class="item item1">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
-											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+								<div id="ads-slider" class="owl-carousel owl-theme">
+									<div class="item item1 p-3">
+										<div class="carousel-content">
+											<a href="#">
+												<img src="assets/images/download.png">
+											</a>
 										</div>
 									</div>
 									<div class="item item2">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 									<div class="item item3">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 									<div class="item item4">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 									<div class="item item5">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 
 									<div class="item item6">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 
-									<div class="item item6">
-										<div class="decs">
-											<h5 class="post-title">
-												অমিতের জন্য পাত্রী চাই, মেয়ে প্রতিবন্ধী হলেও সমস্যা নাই.
+									<div class="item item7">
+										<div class="carousel-content p-3">
+											<h5 class="post-title blue-text">
+												ইঞ্জিনিয়ার পাত্রের জন্য জরুরী পাত্রী চাই
 											</h5>
-											<p class="post-content"> তিনি বাংলা ভাষার অন্যতম সাহিত্যিক, দেশপ্রেমী এবং
-												বাংলাদেশের জাতীয় কবি। তাঁর কবিতায় বিদ্রোহী দৃষ্টিভঙ্গির কারণে তাঁকে
-												বিদ্রোহী কবি নামে আখ্যায়িত করা </p>
+
+											<div class="user-contact d-flex align-items-start pt-2">
+												<div class="profile-image overflow-hidden">
+													<a href="#">
+														<img src="assets/images/user/user1.jpg">
+													</a>
+												</div>
+												<div class="user-text">
+													<div class="post-content">
+														<ul class="m-0 p-0 profile_info">
+															<li> <b>নামঃ </b> <span> পাত্র/পাত্রীর নাম </span> </li>
+															<li> <b>বয়সঃ </b> <span>২৫</span> </li>
+															<li> <b>ধর্মঃ </b> <span> হিন্দু </span> </li>
+															<li> <b> বৈবাহিক অবস্থাঃ</b> <span> অবিবাহিত </span> </li>
+
+														</ul>
+													</div>
+													<div class="contact-icon d-flex justify-content-left  pt-2">
+														<div
+															class="whatsApp contact-item d-flex justify-content-center align-items-center whatsapp-bg me-2">
+
+															<a href="#" titl="WhatsApp"> <i
+																	class="fa-brands fa-whatsapp"></i>
+															</a>
+														</div>
+														<div
+															class="fb contact-item d-flex justify-content-center align-items-center fb-bg me-2">
+															<a href="#" titl="Facebok"> <i
+																	class="fa-brands fa-facebook-f"></i>
+															</a>
+														</div>
+													</div>
+
+												</div>
+											</div>
+
 										</div>
 									</div>
 
@@ -496,6 +858,380 @@
 					</section>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="content-tab bg-light py-3 mt-3">
+		<div class="container">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#all"
+						type="button" role="tab" aria-controls="home" aria-selected="true"> সব </button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#groom" type="button"
+						role="tab" aria-controls="profile" aria-selected="false"> বর দেখি </button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#bride" type="button"
+						role="tab" aria-controls="contact" aria-selected="false"> কনে দেখি </button>
+				</li>
+			</ul>
+			<div class="tab-content mt-3" id="myTabContent">
+				<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="home-tab">
+					<div class="row g-3">
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="###">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user2.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="tab-pane fade" id="groom" role="tabpanel" aria-labelledby="profile-tab">
+					<div class="row g-3">
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="###">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user2.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user2.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user2.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user1.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user2.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="tab-pane fade" id="bride" role="tabpanel" aria-labelledby="contact-tab">
+					<div class="row g-3">
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="###">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user4.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user4.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user4.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-md-3 col-6">
+							<div class="user-profile card py-2">
+								<a href="#">
+									<div class="user-img text-center pt-2">
+										<img src="assets/images/user/user3.jpg" alt="">
+									</div>
+									<ul class="m-0 p-0 mt-1 text-center profile_info">
+										<li> <b> ID: </b> <span> SB989898</span> </li>
+										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
+									</ul>
+								</a>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="footer py-3">
+		<div class="container">
+			<div class="row gy-3">
+				<div class="col-md-3 col-6">
+					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> নিয়ম কানুন </h3>
+					<ul>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> নিয়ম কানুন </h3>
+					<ul>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> নিয়ম কানুন </h3>
+					<ul>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-6">
+					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> নিয়ম কানুন </h3>
+					<ul>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+						<li> <a href=""> Terms & Policy </a> </li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="copyright py-2">
+		<div class="container">
+			<p class="m-0 text-center white-text"> পোর্টাল তৈরি ও তত্ত্বাবধানে - <a class="white-text" href=""><img
+						src="assets/images/itlab-logo.png" alt=""> <span>আইটি ল্যাব
+						সলিউশন্স লি.</span> </a> </p>
 		</div>
 	</section>
 
@@ -512,6 +1248,7 @@
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/slick.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/select2.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 	<script src="assets/reveal/aos.js"></script>
 </body>
