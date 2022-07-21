@@ -45,6 +45,9 @@
 							<a href="#" class="facebook social-media-icon mx-1" aria-label="LinkedIn">
 								<i class="fa-brands fa-facebook-f"></i>
 							</a>
+							<a href="#" class="add-home-scrn social-media-icon mx-1 me-0" aria-label="LinkedIn">
+								<i class="fa-solid fa-house-circle-check"></i>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -52,12 +55,14 @@
 		</div>
 	</section>
 
-	<section class="emergeny-notice pt-2 pb-2">
+	<section class="emergeny-notice">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="marquee d-flex">
-						<div class="notice-title">
+						<div class="notice-title d-flex">
+							<a href="#" class="d-flex "> <i class="fa-solid fa-house-chimney"></i> </a>
+
 							<span> আর্জেন্ট</span>
 
 						</div>
@@ -497,74 +502,167 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-10 offset-1">
-					<form class="search-box p-3" action="">
+					<div class="search-box p-3" action="">
 						<h4 class="text-center m-0 mb-2"> আপনার জীবন সঙ্গী খুজুন </h4>
-						<div class="data-input">
-							<div class="gender">
-								<label for="">লিঙ্গ- </label> <br>
-								<select id="Gender">
-									<option class="cls" selected> কনে </option>
-									<option> বর </option>
-								</select>
-							</div>
-							<div class="age ">
-								<label for="">বয়স- </label> <br>
-								<div class="age-input d-flex">
-									<select id="CtgSelect" class="inputState">
-										<option class="cls" selected> ১৮ </option>
-										<option> ১৯ </option>
-										<option> ২০ </option>
-										<option> ২১ </option>
-										<option> ২২ </option>
-										<option> ২৩ </option>
-										<option> ২৪ </option>
-										<option> ২৫ </option>
-										<option> ২৬ </option>
-										<option> ২৭ </option>
-										<option> ২৮ </option>
-									</select>
-									<span class="mx-2"> থেকে </span>
-									<select id="CtgSelect" class="inputState">
-										<option class="cls" selected> ১৮ </option>
-										<option> ১৯ </option>
-										<option> ২০ </option>
-										<option> ২১ </option>
-										<option> ২২ </option>
-										<option> ২৩ </option>
-										<option> ২৪ </option>
-										<option> ২৫ </option>
-										<option> ২৬ </option>
-										<option> ২৭ </option>
-										<option> ২৮ </option>
-									</select>
+						<form class="search-box p-3" action="">
+							<div class="row g-3">
+								<div class="col-md-2 col-6">
+									<div class="gender-div">
+										<label class="gender-label position-relative mb-2 ms-4 ps-1"> খুজছি
+										</label> <br>
+										<select class="inputState form-control" id="Gender">
+											<option class="cls" selected> কনে </option>
+											<option> বর </option>
+										</select>
+									</div>
+								</div>
+								<!-- <div class="col-md-4 col-8">
+									<div class="age">
+										<label class="age-label position-relative mb-1 ms-4 ps-1">বয়স </label> <br>
+										<div class="age-input d-flex">
+											<select id="CtgSelect" class="inputState form-control">
+												<option class="cls" selected> ১৮ </option>
+												<option> ১৯ </option>
+												<option> ২০ </option>
+												<option> ২১ </option>
+												<option> ২২ </option>
+												<option> ২৩ </option>
+												<option> ২৪ </option>
+												<option> ২৫ </option>
+												<option> ২৬ </option>
+												<option> ২৭ </option>
+												<option> ২৮ </option>
+											</select>
+											<span class="mx-1"> থেকে </span>
+											<select id="CtgSelect" class="inputState form-control">
+												<option class="cls" selected> ২৮ </option>
+												<option> ১৯ </option>
+												<option> ২০ </option>
+												<option> ২১ </option>
+												<option> ২২ </option>
+												<option> ২৩ </option>
+												<option> ২৪ </option>
+												<option> ২৫ </option>
+												<option> ২৬ </option>
+												<option> ২৭ </option>
+												<option> ২৮ </option>
+											</select>
+										</div>
+									</div>
+								</div> -->
+								<div class="col-md-2 col-6">
+									<div class="relogion">
+										<label for="" class="relogion-label position-relative mb-2 ms-4 ps-1"> ধর্ম
+										</label>
+										<br>
+										<div class="relogion-input">
+											<select id="Religion" class="inputState form-control">
+												<option class="cls" selected> মুসলিম </option>
+												<option> হিন্দু </option>
+												<option> খ্রিষ্টান </option>
+												<option> বৌধ্য </option>
+												<option> অন্যান্য </option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-2 col-6">
+									<div class="relogion">
+										<label for="" class="relogion-label position-relative mb-2 ms-4 ps-1"> বৈবাহিক
+											অবস্থা
+										</label>
+										<br>
+										<div class="relogion-input">
+											<select id="Religion" class="inputState form-control">
+												<option class="cls" selected> মুসলিম </option>
+												<option> হিন্দু </option>
+												<option> খ্রিষ্টান </option>
+												<option> বৌধ্য </option>
+												<option> অন্যান্য </option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-6">
+									<div class="occupation">
+										<label for="" class="occupation-label position-relative mb-2 ms-4 ps-1">পেশা
+										</label> <br>
+										<div class="occupation-input input-group">
+											<select id="Occupation" class="form-control inputState">
+												<option class="cls" selected> সিলেক্ট করুন </option>
+												<option> সরকারী চাকুরী </option>
+												<option> বেসরকারী চাকুরী </option>
+												<option> শিক্ষক </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-6">
+									<div class="occupation">
+										<label for="" class="oversease-label position-relative mb-2 ms-4 ps-1"> বিদেশি
+										</label> <br>
+										<div class="relogion-input input-group">
+											<select id="Oversease" class="form-control inputState">
+												<option class="cls" selected> না </option>
+												<option> সরকারী চাকুরী </option>
+												<option> বেসরকারী চাকুরী </option>
+												<option> শিক্ষক </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+												<option> ফ্রিল্যান্সার </option>
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="relogion">
-								<label for="">বয়স- </label> <br>
-								<div class="relogion-input">
-									<select id="Religion" class="inputState">
-										<option class="cls" selected> মুসলিম </option>
-										<option> হিন্দু </option>
-										<option> খ্রিষ্টান </option>
-										<option> বৌধ্য </option>
-										<option> অন্যান্য </option>
-									</select>
+						</form>
+						<div class="row">
+							<div class="col-4 offset-4">
+								<div class="search-button d-flex justify-content-center mt-2">
+									<a class="searchBtn blue-bg default-btn" href="#">
+										<span class="ms-3"> খুঁজুন </span>
+									</a>
 								</div>
-							</div>
-							<div class="occupation">
-								<label for="">পেশা- </label> <br>
-								<div class="relogion-input">
-									<select id="Occupation" class="inputState">
-										<option class="cls" selected> সিলেক্ট করুন </option>
-										<option> সরকারী চাকুরী </option>
-										<option> বেসরকারী চাকুরী </option>
-										<option> শিক্ষক </option>
-										<option> ফ্রিল্যান্সার </option>
-									</select>
-								</div>
+
 							</div>
 						</div>
-					</form>
+					</div>
+
+
 				</div>
 			</div>
 		</div>

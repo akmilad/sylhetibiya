@@ -6,7 +6,7 @@ window.addEventListener("scroll", function () {
   var scrollTop = window.pageYOffset || document
     .documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
-    navbar.style.top = "-70px";
+    navbar.style.top = "-80px";
   }
   else {
     navbar.style.top = "0";
@@ -31,6 +31,9 @@ if ($('#highlight-slider').length > 0) {
     margin: 15,
     reponsiveClass: true,
     dots: false,
+    // autoplay: true,
+    autoplayTimeout: 500,
+    autoplayHoverPause: true,
     loop: true,
     navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
     // autoplayHoverPause: true,
@@ -171,5 +174,6 @@ function reveal() {
 
 $(document).ready(function () {
   $('#Occupation').select2();
+  $('#Oversease').select2();
 });
 
