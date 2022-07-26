@@ -172,7 +172,6 @@ select {}
 
 .emergeny-notice {
 	margin-top: 80px;
-	background: #f3f3f3;
 }
 
 .home-icon {
@@ -393,13 +392,15 @@ select {}
 	left: -24px;
 	height: 20px;
 	width: 20px;
-	/* background: hsl(213deg 100% 37%); */
+	top: 3px;
+	background: hsl(213deg 100% 37%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 4px;
 	font-size: 14px;
-	color: #333;
+	color: #fff;
+
 }
 
 .search-box .gender-label::before {
@@ -459,6 +460,7 @@ select {}
 
 .select2-container .select2-selection--single {
 	height: 32px;
+
 }
 
 .default-btn.searchBtn {
@@ -765,165 +767,6 @@ select {}
 
 
 
-
-/* Registration Form */
-.singIn-Singup-Form label {
-	display: block;
-	margin-bottom: 0.5rem;
-}
-
-.singIn-Singup-Form input {
-	display: block;
-	width: 100%;
-	padding: 1.5rem 0.75rem;
-	border: 1px solid #ccc;
-	border-radius: 0.25rem;
-	font-size: 16px;
-}
-
-
-.singIn-Singup-Form .ml-auto {
-	margin-left: auto;
-}
-
-.singIn-Singup-Form .text-center {
-	text-align: center;
-}
-
-/* Progressbar */
-.singIn-Singup-Form .progressbar {
-	/* position: relative; */
-	/* display: flex; */
-	justify-content: space-between;
-	counter-reset: step;
-	/* margin: 2rem 0 4rem; */
-}
-
-.singIn-Singup-Form .progressbar::before,
-.singIn-Singup-Form .progress {
-	content: "";
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	height: 4px;
-	width: 100%;
-	background-color: #dcdcdc;
-	z-index: -1;
-}
-
-.singIn-Singup-Form .progress {
-	background-color: var(--primary-color);
-	width: 0%;
-	transition: 0.3s;
-}
-
-.singIn-Singup-Form .progress-step {
-	width: 2.1875rem;
-	height: 2.1875rem;
-	background-color: #dcdcdc;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.singIn-Singup-Form .progress-step::before {
-	counter-increment: step;
-	content: counter(step);
-}
-
-.singIn-Singup-Form .progress-step::after {
-	content: attr(data-title);
-	position: absolute;
-	top: calc(100% + 0.5rem);
-	font-size: 0.85rem;
-	color: #666;
-}
-
-.singIn-Singup-Form .progress-step-active {
-	background-color: var(--primary-color);
-	color: #f3f3f3;
-}
-
-/* Form */
-.singIn-Singup-Form .form {
-	/* width: ; */
-	/* width: clamp(320px, 30%, 430px); */
-	margin: 0 auto;
-	border: 1px solid #ccc;
-	border-radius: 0.35rem;
-	/* padding: 1.5rem; */
-}
-
-.singIn-Singup-Form .form-step {
-	display: none;
-	transform-origin: top;
-	animation: animate 0.5s;
-}
-
-.singIn-Singup-Form .form-step-active {
-	display: block;
-}
-
-.singIn-Singup-Form .input-group {
-	/* margin: 2rem 0; */
-	position: relative;
-	display: flex;
-	flex-wrap: colomun;
-	align-items: stretch;
-	width: 100%;
-	flex-direction: column;
-}
-
-@keyframes animate {
-	from {
-		transform: scale(1, 0);
-		opacity: 0;
-	}
-
-	to {
-		transform: scale(1, 1);
-		opacity: 1;
-	}
-}
-
-/* Button */
-.singIn-Singup-Form .btns-group {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 1.5rem;
-}
-
-.singIn-Singup-Form .btn {
-	padding: 0.75rem;
-	display: block;
-	text-decoration: none;
-	background-color: var(--primary-color);
-	color: #f3f3f3;
-	text-align: center;
-	border-radius: 0.25rem;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-.singIn-Singup-Form .btn:hover {
-	box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
-}
-
-.signUp-select {
-	padding: -1.5rem 0.75rem;
-	display: block;
-	padding: 0.8rem 0.75rem;
-	border: 1px solid #ccc;
-	border-radius: 0.25rem;
-	font-size: 16px;
-	width: 100%;
-}
-
-/* Registration Form */
-
-
-
 /* Footer */
 .footer {
 	background: #001d40 url(../images/map-bg-1.png);
@@ -1088,82 +931,3 @@ body.light .progress-wrap svg.progress-circle path {
 }
 
 /* Top Scroll Progress */
-
-
-
-
-
-/* PhoneNumber Picker */
-.iti__hide {
-	display: none;
-}
-
-.iti.iti--allow-dropdown {
-	width: 100%;
-}
-
-pre {
-	margin: 0 !important;
-	display: inline-block;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	background: none;
-}
-
-input,
-button {
-	height: 35px;
-	margin: 0;
-	padding: 6px 12px;
-	border-radius: 2px;
-	font-family: inherit;
-	font-size: 100%;
-	color: inherit;
-}
-
-input[disabled],
-button[disabled] {
-	background-color: #eee;
-}
-
-input,
-select {
-	border: 1px solid #CCC;
-	width: 250px;
-}
-
-::-webkit-input-placeholder {
-	color: #BBB;
-}
-
-::-moz-placeholder {
-	/* Firefox 19+ */
-	color: #BBB;
-	opacity: 1;
-}
-
-:-ms-input-placeholder {
-	color: #BBB;
-}
-
-button {
-	color: #FFF;
-	background-color: #428BCA;
-	border: 1px solid #357EBD;
-}
-
-button:hover {
-	background-color: #3276B1;
-	border-color: #285E8E;
-	cursor: pointer;
-}
-
-#result {
-	margin-bottom: 100px;
-}

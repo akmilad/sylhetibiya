@@ -177,3 +177,80 @@ $(document).ready(function () {
   $('#Oversease').select2();
 });
 
+
+
+// MultiStep Registration Form
+const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
+
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
+    }
+  });
+
+  const progressActive = document.querySelectorAll(".progress-step-active");
+
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+}
+// MultiStep Registration Form
+
+
+var input = document.querySelector("#phonee");
+window.intlTelInput(input, {
+  // allowDropdown: false,
+  // autoHideDialCode: false,
+  // autoPlaceholder: "off",
+  // dropdownContainer: document.body,
+  // excludeCountries: ["us"],
+  // formatOnDisplay: false,
+  // geoIpLookup: function (callback) {
+  //   $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
+  //     var countryCode = (resp && resp.country) ? resp.country : "";
+  //     callback(countryCode);
+  //   });
+  // },
+  // hiddenInput: "full_number",
+  // initialCountry: "auto",
+  // localizedCountries: { 'de': 'Deutschland' },
+  // nationalMode: false,
+  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+  // placeholderNumberType: "MOBILE",
+  // preferredCountries: ['cn', 'jp'],
+  // separateDialCode: true
+  utilsScript: "assets/js/utils.js"
+});
