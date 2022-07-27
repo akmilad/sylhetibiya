@@ -749,6 +749,11 @@ select {}
 	background-color: #0063DB;
 }
 
+.user-profile {
+	position: relative;
+	overflow: hidden;
+}
+
 .user-profile a {
 	text-decoration: none;
 }
@@ -763,8 +768,22 @@ select {}
 	box-shadow: 0px 0px 4px 1px #999;
 }
 
+.userShortDetails {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 1);
+	inset: 0;
+	transform: scale(0);
+	transition: transform .5s;
+}
 
+.userShortDetails p {
+	color: #fff;
+}
 
+.user-profile:hover .userShortDetails {
+	opacity: 1;
+	transform: scale(1);
+}
 
 /* Registration Form */
 .singIn-Singup-Form label {
@@ -781,6 +800,9 @@ select {}
 	font-size: 16px;
 }
 
+.field_label {
+	font-weight: 700;
+}
 
 .singIn-Singup-Form .ml-auto {
 	margin-left: auto;
@@ -859,6 +881,7 @@ select {}
 	display: none;
 	transform-origin: top;
 	animation: animate 0.5s;
+	transform: all .5s ease-in-out;
 }
 
 .singIn-Singup-Form .form-step-active {
@@ -877,12 +900,12 @@ select {}
 
 @keyframes animate {
 	from {
-		transform: scale(1, 0);
+		transform: scale(.6);
 		opacity: 0;
 	}
 
 	to {
-		transform: scale(1, 1);
+		transform: scale(1);
 		opacity: 1;
 	}
 }
@@ -910,14 +933,41 @@ select {}
 	box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
+.singIn-Singup-Form .submit-button {
+
+	height: 50px;
+	background-color: var(--secondery-color);
+}
+
 .signUp-select {
 	padding: -1.5rem 0.75rem;
 	display: block;
-	padding: 0.8rem 0.75rem;
+	padding: 0.6rem 0.75rem;
 	border: 1px solid #ccc;
 	border-radius: 0.25rem;
 	font-size: 16px;
 	width: 100%;
+	color: #999;
+}
+
+.signUp-select option {
+	color: #111;
+}
+
+
+
+.signUp-select.changed {
+	color: #111;
+}
+
+.signUp-select option:first-of-type {
+	color: #999;
+}
+
+
+#hideValuesOnSelect,
+#oversease {
+	display: none;
 }
 
 /* Registration Form */
@@ -1095,14 +1145,14 @@ body.light .progress-wrap svg.progress-circle path {
 
 /* PhoneNumber Picker */
 .iti__hide {
-	display: none;
+	/* display: none; */
 }
 
 .iti.iti--allow-dropdown {
 	width: 100%;
 }
 
-pre {
+..singIn-Singup-Form pre {
 	margin: 0 !important;
 	display: inline-block;
 }
@@ -1116,9 +1166,13 @@ pre {
 	background: none;
 }
 
-input,
-button {
-	height: 35px;
+.singIn-Singup-Form input {
+	height: 42px;
+}
+
+.singIn-Singup-Form input,
+.singIn-Singup-Form button {
+	/* height: 35px; */
 	margin: 0;
 	padding: 6px 12px;
 	border-radius: 2px;
@@ -1127,8 +1181,8 @@ button {
 	color: inherit;
 }
 
-input[disabled],
-button[disabled] {
+..singIn-Singup-Form input[disabled],
+..singIn-Singup-Form button[disabled] {
 	background-color: #eee;
 }
 
@@ -1152,13 +1206,13 @@ select {
 	color: #BBB;
 }
 
-button {
+..singIn-Singup-Form button {
 	color: #FFF;
 	background-color: #428BCA;
 	border: 1px solid #357EBD;
 }
 
-button:hover {
+..singIn-Singup-Form button:hover {
 	background-color: #3276B1;
 	border-color: #285E8E;
 	cursor: pointer;

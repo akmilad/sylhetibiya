@@ -16,13 +16,6 @@ window.addEventListener("scroll", function () {
 // Sticky Top bar
 
 
-// bootstrap Slider
-var myCarousel = document.querySelector('#myCarousel')
-var carousel = new bootstrap.Carousel(myCarousel, {
-  // interval: 500,
-  // wrap: true
-})
-// bootstrap Slider
 
 // Owl Carousel highlight-slider ///
 if ($('#highlight-slider').length > 0) {
@@ -229,7 +222,7 @@ function updateProgressbar() {
 }
 // MultiStep Registration Form
 
-
+// Phone Number Picker 
 var input = document.querySelector("#phonee");
 window.intlTelInput(input, {
   // allowDropdown: false,
@@ -254,3 +247,51 @@ window.intlTelInput(input, {
   // separateDialCode: true
   utilsScript: "assets/js/utils.js"
 });
+// Phone Number Picker
+
+
+
+// Select Box
+function checkSelectboxes() {
+  // select all checkboxes, here i choose to do so based on classname
+  let selectboxes = document.querySelectorAll('.signUp-select');
+  // loop through all checkboxes (only one this time)
+  selectboxes.forEach(sb => {
+    //add eventlistener to each checkbox
+    sb.addEventListener('change', function (e) {
+      // if the value of this checkbox isnt "" Then add class, otherwise : remove it.
+      e.target.value !== "" ? e.target.classList.add('changed') : e.target.classList.remove('changed');
+    })
+  })
+}
+
+//call the function
+checkSelectboxes();
+// Select Box
+
+
+
+
+function displayDivDemo(id, elementValue) {
+  document.getElementById(id).style.display = elementValue.value == 1 ? 'none' : 'block';
+}
+
+
+// function displayDivOversease(id, elementValue) {
+//   document.getElementById(id).style.display = elementValue.value == 1 ? 'block' : 'none';
+// }
+
+
+
+
+// $(document).ready(function () {
+//   $('#colorselector').on('change', function () {
+//     if (this.value == 1) {
+//       $("#divid").show();
+//     }
+//     else {
+//       $("#divid").hide();
+//     }
+//   });
+// });
+
