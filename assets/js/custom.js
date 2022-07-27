@@ -25,8 +25,8 @@ if ($('#highlight-slider').length > 0) {
     reponsiveClass: true,
     dots: false,
     // autoplay: true,
-    autoplayTimeout: 500,
-    autoplayHoverPause: true,
+    // autoplayTimeout: 500,
+    // autoplayHoverPause: true,
     loop: true,
     navText: ["<i class='icon-arrow-left'></i>", "<i class='icon-arrow-right'></i>"],
     // autoplayHoverPause: true,
@@ -168,6 +168,9 @@ function reveal() {
 $(document).ready(function () {
   $('#Occupation').select2();
   $('#Oversease').select2();
+  $('#Gender').select2();
+  $('#Religion').select2();
+  $('#SrcMaritialStatus').select2();
 });
 
 
@@ -221,6 +224,8 @@ function updateProgressbar() {
     ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 // MultiStep Registration Form
+
+
 
 // Phone Number Picker 
 var input = document.querySelector("#phonee");
@@ -294,4 +299,7 @@ function displayDivDemo(id, elementValue) {
 //     }
 //   });
 // });
+
+
+
 

@@ -106,6 +106,7 @@
 							<div class="progress-step"></div>
 							<div class="progress-step"></div>
 							<div class="progress-step"></div>
+							<div class="progress-step"></div>
 							<!-- <div class="progress-step" data-title="Password22"></div> -->
 						</div>
 
@@ -119,7 +120,7 @@
 								<div class="col-md-6 col-12">
 									<div class="input-group my-2">
 										<label class="field_label" for="MobileNo">মোবাইল নংঃ </label>
-										<input id="phonee" name="phone" type="tel" required>
+										<input id="phonee" name="phone" type="number" required>
 									</div>
 								</div>
 								<div class="col-md-6 col-12">
@@ -154,7 +155,7 @@
 								<div class="col-md-6 col-12">
 									<div class="input-group my-2">
 										<label class="field_label" for="Religion"> ধর্ম </label>
-										<select id="Religion" class="signUp-select">
+										<select id="SelectReligion" class="signUp-select">
 											<option class="cls" disabled selected> ধর্ম নির্বাচন
 												করুন</option>
 											<option> ইসলাম </option>
@@ -168,7 +169,7 @@
 								<div class="col-md-6 col-12">
 									<div class="input-group my-2">
 										<label class="field_label" for="Gender"> লিঙ্গ </label>
-										<select id="Gender" class="signUp-select">
+										<select id="SelectGender" class="signUp-select">
 											<option disabled selected> লিঙ্গ নির্বাচন করুন </option>
 											<option> পুরুষ </option>
 											<option> মহিলা </option>
@@ -198,6 +199,14 @@
 
 							<div class="row g-3">
 								<h1 class="text-center my-3"> ব্যক্তিগত তথ্য </h1>
+
+								<div class="col-md-6 col-12">
+									<div class="input-group my-2">
+										<label class="field_label" for="SignUpName"> নাম </label>
+										<input id="NameInput" name="SignUpName" type="text"
+											placeholder="পাত্র/পাত্রীর নাম লিখুন">
+									</div>
+								</div>
 
 								<div class="col-md-6 col-6">
 									<div class="input-group my-2">
@@ -382,10 +391,10 @@
 									<div class="input-group my-2">
 										<label class="field_label" for="FamilyOverses"> পরিবারের কেউ বিদেশি </label>
 										<select id="FamilyOverses" class="signUp-select">
-											<option value="0" selected> ফর্সা </option>
-											<option value="1"> শ্যামলা </option>
-											<option> কালো </option>
-											<option> গোলাপী </option>
+											<option value="0" selected> না </option>
+											<option value="1"> কাতার </option>
+											<option> দুবাই </option>
+											<option> লন্ডন </option>
 
 										</select>
 									</div>
@@ -545,7 +554,7 @@
 						</div>
 						<!-- Demand User -->
 
-						<!-- Contact Form -->
+						<!-- Demand User -->
 						<div class="form-step">
 
 							<div class="row g-3">
@@ -573,19 +582,88 @@
 									</div>
 								</div>
 
-								<div class="btns-group">
-									<a href="#" class="btn btn-prev"> পূর্ববর্তী </a>
-									<input type="submit" value="জমাদিন" class="btn submit-button" />
+								<div class="btns-group py-3">
+									<a href="#" class="btn btn-prev">পূর্ববর্তী</a>
+									<a href="#" class="btn btn-next">Next</a>
 								</div>
 							</div>
+
+
 						</div>
+						<!-- Demand User -->
+
 						<!-- Contact Form -->
+						<div class="form-step">
+
+							<div class="row g-3">
+								<div class="container">
+									<div class="wrapper">
+										<div class="image">
+											<img src="" alt="">
+										</div>
+										<div class="content">
+											<div class="icon">
+												<i class="fas fa-cloud-upload-alt"></i>
+											</div>
+											<div class="text">
+												No file chosen, yet!
+											</div>
+										</div>
+										<div id="cancel-btn">
+											<i class="fas fa-times"></i>
+										</div>
+										<div class="file-name">
+											File name here
+										</div>
+									</div>
+									<button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+									<input id="default-btn" type="file" hidden>
+								</div>
+							</div>
+							<!-- Contact Form -->
+
+
+
 
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
+
+
+
+	<script>
+		const wrapper = document.querySelector(".image");
+		const defaultBtn = document.querySelector("#default-btn");
+		const customBtn = document.querySelector("#custom-btn");
+		const cancelBtn = document.querySelector("#cancel-btn i");
+		const img = document.querySelector("img");
+		let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+		function defaultBtnActive() {
+			defaultBtn.click();
+		}
+		defaultBtn.addEventListener("change", function () {
+			const file = this.files[0];
+			if (file) {
+				const reader = new FileReader();
+				reader.onload = function () {
+					const result = reader.result;
+					img.src = result;
+					wrapper.classList.add("active");
+				}
+				cancelBtn.addEventListener("click", function () {
+					img.src = "";
+					wrapper.classList.remove("active");
+				})
+				reader.readAsDataURL(file);
+			}
+			if (this.value) {
+				let valueStore = this.value.match(regExp);
+				fileName.textContent = valueStore;
+			}
+		});
+	</script>
 
 
 
