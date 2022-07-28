@@ -302,4 +302,14 @@ function displayDivDemo(id, elementValue) {
 
 
 
+// PopUp Box
+var popup = document.getElementById("popUpArea");
+function opnePopup() {
+  popup.classList.add("openPopup");
+}
+function closePopup() {
+  popup.classList.remove("openPopup");
+}
+	// PopUp Box
+
 

@@ -883,8 +883,9 @@
 				<div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="home-tab">
 					<div class="row g-3">
 						<div class="col-md-3 col-6">
-							<div class="user-profile card py-2">
-								<a href="###">
+							<div class="user-profile card pt-2">
+								<div href="###" class="userProfileTop" data-bs-toggle="modal"
+									data-bs-target="#exampleModal">
 									<div class="user-img text-center pt-2">
 										<img src="assets/images/user/user3.jpg" alt="">
 									</div>
@@ -892,13 +893,10 @@
 										<li> <b> ID: </b> <span> SB989898</span> </li>
 										<li> <b> বয়সঃ </b> <span> ২৫ </span> <b> ধর্মঃ </b> <span> হিন্দু </span> </li>
 									</ul>
-									<a class="text-center see-more-profile my-1" href="##"> আরো দেখুন... </a>
-								</a>
+								</div>
 
-								<!-- <div class="userShortDetails">
-									<p class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-										Aliquid, suscipit. </p>
-								</div> -->
+								<a class="text-center see-more-profile py-2" href="##"> আরো দেখুন... </a>
+
 							</div>
 						</div>
 						<div class="col-md-3 col-6">
@@ -1191,6 +1189,62 @@
 			</div>
 		</div>
 	</section>
+
+
+
+
+
+
+	<!-- Button trigger modal -->
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary">
+		Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="closeBtnPopup d-flex"> <span data-bs-dismiss="modal"> <i class="fa-solid fa-xmark"></i>
+					</span> </div>
+
+				<div class="user-profile popUp card">
+					<div class="row">
+						<div class="col-6">
+
+							<div class="user-img ps-4  pt-2">
+								<img src="assets/images/user/user3.jpg" alt="">
+							</div>
+							<ul class="m-0 mt-2 ps-4  profile_info L">
+								<li> <b> ID: </b> <span> SB989898</span> </li>
+								<li> <b> লিঙ্গঃ </b> <span> মহিলা </span></li>
+							</ul>
+						</div>
+						<div class="col-6">
+							<ul class="m-0 px-3 mt-2  profile_info R">
+								<li> <b> বয়সঃ </b> <span> ২৫ </span> </li>
+								<li> <b> বৈবাহিক অবস্থাঃ </b> <span> অবিবাহিত </span> </li>
+								<li> <b> শিক্ষাগত যোগ্যতাঃ </b> <span> বিএ </span> </li>
+								<li> <b> পেশাঃ </b> <span> ব্যবসা </span> </li>
+								<li> <b> উপজেলাঃ </b> <span> দক্ষিণ সুরমা </span> </li>
+								<li> <b> বিদেশিঃ </b> <span> আমেরিকান </span> </li>
+							</ul>
+						</div>
+					</div>
+					<a class="text-center see-more-profile py-2" href="##"> আরো দেখুন... </a>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
 
 	<section class="footer py-4">
 		<div class="container">

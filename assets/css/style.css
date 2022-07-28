@@ -575,12 +575,10 @@ select {}
 
 .profile_info {
 	list-style: none;
-
+	margin-bottom: 4px !important;
 }
 
-.profile_info li {
-	margin: 2px 0;
-}
+
 
 .profile_info li b {
 	color: var(--primary-color);
@@ -594,7 +592,6 @@ select {}
 .profile_info li b:nth-of-type(2) {
 	margin-left: 20px;
 }
-
 
 
 /* .user-contact .user-text::before {
@@ -738,10 +735,13 @@ select {}
 	box-shadow: 1px 1px 2px 2px #efefef;
 	background: rgb(255 255 255 / 100%);
 	font-size: 14px;
+}
+
+.userProfileTop {
 	transition: all .3s;
 }
 
-.content-tab .card:hover {
+.userProfileTop:hover {
 	background: rgb(241, 241, 241);
 }
 
@@ -756,6 +756,11 @@ select {}
 
 .user-profile a {
 	text-decoration: none;
+}
+
+.see-more-profile {
+	background: #e9e9e9;
+	font-size: 16px;
 }
 
 .user-profile .user-img {}
@@ -779,6 +784,44 @@ select {}
 .userShortDetails p {
 	color: #fff;
 }
+
+
+
+.popUp.user-profile {
+	box-shadow: unset;
+	border: 0;
+}
+
+.btn-close {
+	width: 95%;
+	text-align: right;
+	background-position-x: right;
+}
+
+.popUp.user-profile .user-img img {
+	overflow: hidden;
+	border-radius: 10%;
+	box-shadow: 0px 0px 4px 1px #999;
+}
+
+.profile_info.R {
+	line-height: 32px;
+}
+
+.closeBtnPopup {
+	justify-content: end;
+}
+
+.closeBtnPopup span {
+	font-size: 22px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	background: #e6e6e6;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
 
 
 /* Registration Form */
