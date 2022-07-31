@@ -1,3 +1,17 @@
+@media (max-width: 576px) {
+    #highlight-slider .owl-item.active {
+        width: 270px !important;
+    }
+
+    .post-title {
+        font-size: 16px !important;
+    }
+
+    .post-content {
+        font-size: 12px;
+    }
+}
+
 @media (min-width: 768px) {
     /* .owl-carousel::before {
         position: absolute;
@@ -120,6 +134,8 @@
 
 
 @media (max-width: 767px) {
+
+
     .banner_title {
         font-size: 1.3rem;
     }
