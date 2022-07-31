@@ -28,6 +28,7 @@
 
 <body>
 
+	<!--<<<<<<< TopBar Start <<<<<<<<< -->
 	<section id="topBar" class="top-bar-main pt-2 pb-2">
 		<div class="container">
 			<div class="top_bar">
@@ -37,36 +38,26 @@
 						</a>
 
 					</div>
-					<div class="col-md-4 col-6 ">
-						<div class="top-bar-icon">
 
-							<a href="#" class="whatsApp social-media-icon mx-1" aria-label="Facebook">
-								<i class="fa-brands fa-whatsapp"></i>
-							</a>
-
-							<a href="#" class="facebook social-media-icon mx-1" aria-label="LinkedIn">
-								<i class="fa-brands fa-facebook-f"></i>
-							</a>
-							<a href="#" class="add-home-scrn social-media-icon mx-1 me-0" aria-label="LinkedIn">
-								<i class="fa-solid fa-house-circle-check"></i>
-							</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!--<<<<<<< TopBar Enddd <<<<<<<<< -->
 
 	<section class="emergeny-notice">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
 					<div class="marquee d-flex">
-						<!-- <div class="home-icon">
-  							<a href="###" class="home-icon pe-2 me-2"> <i class="fa-solid fa-house-chimney"></i>
-  							</a>
-  						</div> -->
+
+						<a title="Milad" href="index.html"
+							class="home-icon d-flex justify-content-center align-items-center px-2"> <i
+								class="fa-solid fa-house-chimney"></i>
+						</a>
+
 						<div class="notice-title ">
+
 							<span> আর্জেন্ট</span>
 						</div>
 						<div class="marquee-slide w-100">
@@ -596,79 +587,59 @@
 						<div class="form-step">
 
 							<div class="row g-3">
-								<div class="container">
-									<div class="wrapper">
-										<div class="image">
-											<img class="showImg" src="" alt="">
-										</div>
-										<div class="content">
-											<div class="icon">
-												<i class="fas fa-cloud-upload-alt"></i>
+								<div class="container ">
+									<div class="preview-btn"> <button onclick="print()"> Preview </button> </div>
+									<div class="ImageShow d-flex justify-content-center">
+										<div class="wrapper">
+											<div class="image" onclick="defaultBtnActive()">
+												<img class="showImg" src="" alt="">
 											</div>
-											<div class="text">
-												No file chosen, yet!
+											<div class="content">
+												<div class="icon">
+													<i class="fas fa-cloud-upload-alt"></i>
+												</div>
+												<div class="text-center">
+													৩০০x৩০০ সাইজের ছবি <br> আপলোড করুন
+												</div>
 											</div>
-										</div>
-										<div id="cancel-btn">
-											<i class="fas fa-times"></i>
-										</div>
-										<div class="file-name">
-											File name here
+											<div id="cancel-btn">
+												<i class="fa-solid fa-xmark"></i>
+											</div>
 										</div>
 									</div>
-									<button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+									<button onclick="defaultBtnActive()" id="custom-btn"> ছবি আপলোড করুন </button>
 									<input id="default-btn" type="file" hidden>
+								</div>
+								<div class="btns-group py-3">
+									<a href="#" class="btn btn-prev">পূর্ববর্তী</a>
+									<input type="submit" value="জমাদিন" class="btn submit-button" />
 								</div>
 							</div>
 							<!-- Contact Form -->
-
-
-
-
 					</form>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
-
-	<script>
-		const wrapper = document.querySelector(".image");
-		const defaultBtn = document.querySelector("#default-btn");
-		const customBtn = document.querySelector("#custom-btn");
-		const cancelBtn = document.querySelector("#cancel-btn i");
-		const img = document.querySelector(".showImg");
-		let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
-		function defaultBtnActive() {
-			defaultBtn.click();
-		}
-		defaultBtn.addEventListener("change", function () {
-			const file = this.files[0];
-			if (file) {
-				const reader = new FileReader();
-				reader.onload = function () {
-					const result = reader.result;
-					img.src = result;
-					wrapper.classList.add("active");
-				}
-				cancelBtn.addEventListener("click", function () {
-					img.src = "";
-					wrapper.classList.remove("active");
-				})
-				reader.readAsDataURL(file);
-			}
-			if (this.value) {
-				let valueStore = this.value.match(regExp);
-				fileName.textContent = valueStore;
-			}
-		});
-	</script>
-
-
-
-	<section class="footer py-5">
+	<!--<<<<<<< Footer  Start <<<<<<<<< -->
+	<section class="footer py-4">
 		<div class="container">
+			<div class="row">
+				<div class="top-bar-icon d-flex justify-content-center pb-4">
+
+					<a href="#" class="whatsApp social-media-icon mx-1" aria-label="Facebook">
+						<i class="fa-brands fa-whatsapp"></i>
+					</a>
+
+					<a href="#" class="facebook social-media-icon mx-1" aria-label="LinkedIn">
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="#" class="add-home-scrn social-media-icon mx-1 me-0" aria-label="LinkedIn">
+						<i class="fa-solid fa-house-circle-check"></i>
+					</a>
+				</div>
+			</div>
 			<div class="row gy-3">
 				<div class="col-md-3 col-6">
 					<img src="assets/images/logo3.png" alt="">
@@ -687,19 +658,25 @@
 					<ul>
 						<li> <a href=""> মোবাঃ ০১৮১৮৭৯৭ </a> </li>
 						<li> <a href=""> ই-মেইলঃ karim@gmail.com </a> </li>
+
 					</ul>
 				</div>
 				<div class="col-md-3 col-6">
-					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> ঠিকানা </h3>
-					<ul>
-						<li> <a href=""> সিলেট </a> </li>
-						<li> <a href=""> বাংলাদেশ </a> </li>
-					</ul>
+					<h3 class="section-title white-text mb-3" style="background-color: transparent;"> ভিসিটর </h3>
+
+					<div class="visitorCounter d-flex justify-content-center">
+						<p class="m-0 d-flex"> <span> 0</span> <span> 0</span> <span> 0</span> <span> 0</span> <span>
+								0</span>
+							<span>
+								1</span>
+						</p>
+					</div>
 				</div>
 
 			</div>
 		</div>
 	</section>
+	<!--<<<<<<< Footer Endd <<<<<<<<< -->
 
 	<section class="copyright py-3">
 		<div class="container">

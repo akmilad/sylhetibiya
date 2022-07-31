@@ -1,4 +1,5 @@
 
+
 // Sticky Top bar
 var lastScrollTop = 0;
 navbar = document.getElementById("topBar");
@@ -120,7 +121,7 @@ if ($('#ads-slider').length > 0) {
     updateProgress();
     $(window).scroll(updateProgress);
     var offset = 50;
-    var duration = 550;
+    var duration = 0;
     jQuery(window).on('scroll', function () {
       if (jQuery(this).scrollTop() > offset) {
         jQuery('.progress-wrap').addClass('active-progress');
@@ -310,6 +311,34 @@ function opnePopup() {
 function closePopup() {
   popup.classList.remove("openPopup");
 }
-	// PopUp Box
+// PopUp Box
 
+
+// Registration Image Upload JS
+const wrapper = document.querySelector(".wrapper");
+const defaultBtn = document.querySelector("#default-btn");
+const customBtn = document.querySelector("#custom-btn");
+const cancelBtn = document.querySelector("#cancel-btn i");
+const img = document.querySelector(".showImg");
+let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+function defaultBtnActive() {
+  defaultBtn.click();
+}
+defaultBtn.addEventListener("change", function () {
+  const file = this.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      const result = reader.result;
+      img.src = result;
+      wrapper.classList.add("active");
+    }
+    cancelBtn.addEventListener("click", function () {
+      img.src = "";
+      wrapper.classList.remove("active");
+    })
+    reader.readAsDataURL(file);
+  }
+});
+// Registration Image Upload JS
 

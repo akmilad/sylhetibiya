@@ -195,3 +195,19 @@
 
     /* Carousel Navigator */
 }
+
+
+@media print {
+    .emergeny-notice {
+        display: none;
+    }
+
+    .singIn-Singup-Form .progressbar {
+        display: none !important;
+    }
+
+    .singIn-Singup-Form .form-step {
+        display: block;
+
+    }
+}
