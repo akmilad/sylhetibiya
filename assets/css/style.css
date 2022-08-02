@@ -137,12 +137,24 @@ select {}
 	box-shadow: 1px 1px 1.5px 0.05px;
 }
 
+.social-media-icon.phoneCall {
+	color: #005493;
+}
+
 .social-media-icon.whatsApp {
 	color: #41BB50;
 }
 
 .social-media-icon.facebook {
 	color: #1771E6;
+}
+
+.social-media-icon.instagram {
+	color: #CC0056;
+}
+
+.social-media-icon.imo img {
+	transform: scale(.7);
 }
 
 .social-media-icon.add-home-scrn {
@@ -160,12 +172,20 @@ select {}
 	transition: all .3s;
 }
 
+.social-media-icon.phoneCall::before {
+	background-color: #005493;
+}
+
 .social-media-icon.whatsApp::before {
 	background-color: #41BB50;
 }
 
 .social-media-icon.facebook::before {
 	background-color: #1771E6;
+}
+
+.social-media-icon.instagram::before {
+	background-color: #CC0056;
 }
 
 .social-media-icon.add-home-scrn::before {
@@ -1100,6 +1120,7 @@ select {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .singIn-Singup-Form .progress-step::before {
@@ -1119,6 +1140,15 @@ select {
 	background-color: var(--primary-color);
 	color: #f3f3f3;
 }
+
+.StepClas {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0);
+}
+
 
 /* Form */
 .singIn-Singup-Form .form {

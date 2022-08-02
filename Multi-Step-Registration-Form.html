@@ -91,13 +91,12 @@
 						<!-- Progress bar -->
 						<div class="progressbar d-flex position-relative mb-5">
 							<div class="progress" id="progressOne"> </div>
-
-							<div class="progress-step progress-step-active"></div>
-							<div class="progress-step"></div>
-							<div class="progress-step"></div>
-							<div class="progress-step"></div>
-							<div class="progress-step"></div>
-							<div class="progress-step"></div>
+							<div class="progress-step progress-step-active" onclick="ShowForm()"></div>
+							<div class="progress-step" onclick="ShowForm()"></div>
+							<div class="progress-step" onclick="ShowForm()"></div>
+							<div class="progress-step" onclick="ShowForm()"></div>
+							<div class="progress-step" onclick="ShowForm()"></div>
+							<div class="progress-step" onclick="ShowForm()"></div>
 							<!-- <div class="progress-step" data-title="Password22"></div> -->
 						</div>
 
@@ -713,6 +712,23 @@
 	<script src="assets/js/intlTelInput.min.js"></script>
 
 	<script src="assets/js/custom.js"></script>
+
+
+
+	<script>
+
+		let progressBar = document.getElementsByClassName("progress-step");
+		let FormStep = document.getElementsByClassName("form-step");
+
+		function ShowForm() {
+			for (stepForm of FormStep) {
+				stepForm.classList.remove("form-step-active")
+			}
+			let i = Array.from(progressBar).indexOf(event.target);
+			progressBar[i].classList.add("progress-step-active");
+			FormStep[i].classList.add("form-step-active");
+		}
+	</script>
 </body>
 
 </html>

@@ -47,8 +47,17 @@ if ($('#highlight-slider').length > 0) {
       }
     }
   });
+  owl.on("mousewheel", ".owl-stage", function (e) {
+    if (e.originalEvent.wheelDelta > 0) {
+      owl.trigger("next.owl");
+    } else {
+      owl.trigger("prev.owl");
+    }
+    e.preventDefault();
+  });
 }
 // Owl Carousel  highlight-slider ///
+
 
 
 // Owl Carousel highlight-slider ///
@@ -341,5 +350,8 @@ defaultBtn.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 });
+
+
+
 // Registration Image Upload JS
 
