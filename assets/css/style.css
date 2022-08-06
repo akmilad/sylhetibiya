@@ -51,10 +51,24 @@ html::-webkit-scrollbar-thumb {
 body {
 	font-family: 'SolaimanLipiNormal', sans-serif;
 	background: var(--white);
+	margin: 0;
+	padding: 0;
 }
 
 
 /* Global Style  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+	margin: 0;
+	padding: 0;
+}
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -550,7 +564,7 @@ select {}
 	position: absolute;
 	content: '';
 	inset: 0;
-	background: url(../images/vector-vintage-seamless-floral-damask-pattern-wedding-invitation-abstract-background-elegance-white-gold-texture-185183902.jpg);
+	background: url(../images/slide_bg.jpg);
 	filter: opacity(15%);
 	background-position: center;
 	background-attachment: fixed;
@@ -1248,13 +1262,119 @@ select {
 }
 
 
-#hideValuesOnSelect,
-#oversease {
+#hideValuesOnSelect {
 	display: none;
 }
 
 /* Registration Form */
 
+
+
+/* Public View Profile Page */
+
+.userProfile {
+	position: relative;
+	isolation: isolate;
+}
+
+.userProfile::before {
+	position: absolute;
+	content: '';
+	inset: 0;
+	background: url(../images/slideBg2.jpg);
+	filter: opacity(15%) grayscale(100%);
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: repeat-x repeat-y;
+	z-index: -1;
+}
+
+.pbBoxShadow {
+	/* box-shadow: 0px 0px 2px 1px #dddddd; */
+	background: #fff;
+}
+
+
+.PviewProfilepImg {
+	width: 100%;
+}
+
+.ProfileDataBox .boxHead {
+	text-align: center;
+	font-weight: 700;
+	color: #fff;
+	position: relative;
+}
+
+.profileIcon {
+	height: 35px;
+	width: 35px;
+	position: absolute;
+	left: 4%;
+	font-size: 36px;
+	color: var(--secondery-color);
+	top: -8px;
+	box-shadow: 0px 0px 2px 1px #d5d5d5;
+	border-radius: 50%;
+	font-size: 24px;
+	background: #ffffff;
+}
+
+.verifyList p {
+	padding: 6px 0;
+}
+
+.boxData p {
+	display: flex;
+	justify-content: space-between;
+	padding: 6px 8px;
+	background: #f6f6f6;
+	margin: 2px 0;
+	padding-right: 40px;
+}
+
+.largeinfoBox .ProfileStatus {
+	height: 100%;
+
+}
+
+.ProfileSicon .whatsApp {
+	background-color: #30A923 !important;
+
+}
+
+.ProfileSicon .facebook {
+	background-color: #1771E6 !important;
+
+}
+
+.ProfileSicon .whatsApp::before,
+.ProfileSicon .facebook::before {
+	background-color: rgb(255 255 255);
+}
+
+.ProfileInfoList {
+	border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.ProfileInfoList li {
+	padding: 8px 60px 8px 0px;
+	font-size: 18px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.ProfileInfoList li i {
+	color: var(--secondery-color);
+	margin-right: 6px;
+	width: 20px;
+}
+
+.FieldBold {
+	font-weight: bold;
+}
+
+/* Public View Profile Page */
 
 
 /* Footer */
@@ -1302,13 +1422,13 @@ select {
 }
 
 .visitorCounter p span:nth-of-type(even) {
-	background-color: #00306a;
+	background-color: var(--primary-color);
 	color: #fff;
 }
 
 .visitorCounter p span:nth-of-type(odd) {
-	background-color: #e1e1e1;
-	color: #111;
+	background-color: #00326f;
+	color: #fff;
 }
 
 /* Footer */

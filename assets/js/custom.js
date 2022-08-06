@@ -34,26 +34,18 @@ if ($('#highlight-slider').length > 0) {
     responsive: {
       // breakpoint from 0 up
       0: {
-        items: 2,
+        items: 2
       },
 
       // breakpoint from 768 up
       768: {
-        items: 3,
+        items: 3
       },
       // breakpoint from 991 up
       991: {
-        items: 4,
+        items: 4
       }
     }
-  });
-  owl.on("mousewheel", ".owl-stage", function (e) {
-    if (e.originalEvent.wheelDelta > 0) {
-      owl.trigger("next.owl");
-    } else {
-      owl.trigger("prev.owl");
-    }
-    e.preventDefault();
   });
 }
 // Owl Carousel  highlight-slider ///
@@ -241,26 +233,7 @@ function updateProgressbar() {
 // Phone Number Picker 
 var input = document.querySelector("#phonee");
 window.intlTelInput(input, {
-  // allowDropdown: false,
-  // autoHideDialCode: false,
-  // autoPlaceholder: "off",
-  // dropdownContainer: document.body,
-  // excludeCountries: ["us"],
-  // formatOnDisplay: false,
-  // geoIpLookup: function (callback) {
-  //   $.get("http://ipinfo.io", function () { }, "jsonp").always(function (resp) {
-  //     var countryCode = (resp && resp.country) ? resp.country : "";
-  //     callback(countryCode);
-  //   });
-  // },
-  // hiddenInput: "full_number",
-  // initialCountry: "auto",
-  // localizedCountries: { 'de': 'Deutschland' },
-  // nationalMode: false,
-  // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-  // placeholderNumberType: "MOBILE",
-  // preferredCountries: ['cn', 'jp'],
-  // separateDialCode: true
+
   utilsScript: "assets/js/utils.js"
 });
 // Phone Number Picker
@@ -291,26 +264,6 @@ checkSelectboxes();
 function displayDivDemo(id, elementValue) {
   document.getElementById(id).style.display = elementValue.value == 1 ? 'none' : 'block';
 }
-
-
-// function displayDivOversease(id, elementValue) {
-//   document.getElementById(id).style.display = elementValue.value == 1 ? 'block' : 'none';
-// }
-
-
-
-
-// $(document).ready(function () {
-//   $('#colorselector').on('change', function () {
-//     if (this.value == 1) {
-//       $("#divid").show();
-//     }
-//     else {
-//       $("#divid").hide();
-//     }
-//   });
-// });
-
 
 
 // PopUp Box
@@ -350,8 +303,5 @@ defaultBtn.addEventListener("change", function () {
     reader.readAsDataURL(file);
   }
 });
-
-
-
 // Registration Image Upload JS
 

@@ -228,5 +228,4 @@
 	.footer {
 	   display: none;
 	}
-
 }
