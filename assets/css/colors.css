@@ -9,6 +9,9 @@
 .primary-bg {
     background: var(--primary-color) !important;
 }
+.white-bg {
+    background: #fff !important;
+}
 
 .pink-text {
     color: var(--primary-color);

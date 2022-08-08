@@ -262,7 +262,7 @@ checkSelectboxes();
 
 
 function displayDivDemo(id, elementValue) {
-  document.getElementById(id).style.display = elementValue.value == 1 ? 'none' : 'block';
+  document.getElementById(id).style.display = elementValue.value == "" ? 'none' : 'block';
 }
 
 
@@ -304,4 +304,6 @@ defaultBtn.addEventListener("change", function () {
   }
 });
 // Registration Image Upload JS
+
+
 

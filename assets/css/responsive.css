@@ -145,6 +145,14 @@
         height: 34px;
     }
 
+    /* Log In Page */
+    .default-btn.loginPageBtn {
+        width: 100%;
+    }
+
+    /* Log In Page */
+
+
     /* Owl Carousel */
 
 
@@ -212,21 +220,72 @@
     /* Carousel Navigator */
 }
 
+.PrintPreview {
+    position: relative;
+}
+
+.PrintWaterMark {
+    display: none;
+    /* height: 300px; */
+    /* width: 300px; */
+    position: absolute;
+    top: 60%;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-35deg) scale(4.5);
+    filter: opacity(20%) grayscale(100%);
+}
 
 @media print {
+    .PrintWaterMark {
+        display: block;
+    }
+
+    .PrintPreview {
+        padding: 20px;
+    }
+
+
+
+    @page {
+        size: a4;
+        margin: 10px;
+    }
+
+    .pringHeader {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .PviewProfileLogo {
+        height: 100%;
+    }
+
+    .PrintPreviewPic {
+        height: 170px;
+        width: 170px;
+    }
+
     .emergeny-notice {
         display: none;
     }
 
-    .singIn-Singup-Form .progressbar {
+    .ProfileInfoList li {
+        line-height: 15px;
+    }
+
+    .singIn-Singup-Form .progressbar,
+    .progress-wrap,
+    .copyright {
         display: none !important;
     }
 
     .singIn-Singup-Form .form-step {
         display: block;
     }
-	.footer {
-	   display: none;
-	}
+
+    .footer {
+        display: none;
+    }
 
 }
