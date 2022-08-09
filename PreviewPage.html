@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="assets/css/select2.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script src="assets/js/html2pdf.bundle.js"></script>
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -28,14 +29,25 @@
 <body>
 
 
-	<section>
-
+	<section class="PrntBtnMain mt-4">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 offset-md-9">
+					<div class="PrntDownload">
+						<button class="prntBtn mx-1 py-1 px-2" onclick="print()"> <i
+								class="fa-solid fa-print me-2"></i>Print</button>
+						<button class="downloadBtn mx-1 py-1 px-2" id="DownloadPdf"> <i
+								class="fa-solid fa-download me-2"></i>Download</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!--<<<<<<< PrintPreview <<<<<<<<< -->
-	<section class="PrintPreview py-4">
+	<section class="PrintPreview py-4" id="PrintDownload">
 
-		<div class="PrintWaterMark">
+		<div class="PrintWaterMark" id="WaterMark">
 			<img src="assets/images/logo2.png" alt="">
 		</div>
 
@@ -221,7 +233,6 @@
 	<!--<<<<<<< PrintPreview <<<<<<<<< -->
 
 
-
 	<!--<<<<<<< Footer  Start <<<<<<<<< -->
 	<section class="footer py-4">
 		<div class="container">
@@ -308,9 +319,8 @@
 	<script src="assets/js/owl.carousel.min.js"></script>
 	<script src="assets/js/select2.min.js"></script>
 	<script src="assets/js/vanilla-tilt.js"></script>
-	<script src="assets/js/custom.js"></script>
 	<script src="assets/reveal/aos.js"></script>
-
+	<script src="assets/js/custom.js"></script>
 </body>
 
 </html>

@@ -1451,9 +1451,35 @@ select {
 	border-top: 1px solid #999;
 }
 
-.ForCommmunity {}
+
+.PrntDownload {
+	display: flex;
+	justify-content: end;
+}
+
+.prntBtn,
+.downloadBtn {
+	border: 0;
+	color: var(--white);
+}
+
+.prntBtn {
+	background-color: var(--primary-color);
+}
+
+.downloadBtn {
+	background-color: var(--secondery-color);
+}
 
 /* Print Preview Page */
+
+
+/*Pass Recovery Page*/
+.ResetBtn {
+	width: auto !important;
+}
+
+/*Pass Recovery Page*/
 
 
 /* Footer */

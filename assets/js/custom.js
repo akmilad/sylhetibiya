@@ -85,61 +85,35 @@ if ($('#ads-slider').length > 0) {
 
 
 // Scroll to top Progress
-(function ($) {
-  "use strict";
-
-  //Switch dark/light
-
-  $(".switch").on('click', function () {
-    if ($("body").hasClass("light")) {
-      $("body").removeClass("light");
-      $(".switch").removeClass("switched");
-    }
-    else {
-      $("body").addClass("light");
-      $(".switch").addClass("switched");
-    }
-  });
-
-  $(document).ready(function () {
-    "use strict";
-
-    //Scroll back to top
-
-    var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
-      var scroll = $(window).scrollTop();
-      var height = $(document).height() - $(window).height();
-      var progress = pathLength - (scroll * pathLength / height);
-      progressPath.style.strokeDashoffset = progress;
-    }
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 50;
-    var duration = 0;
-    jQuery(window).on('scroll', function () {
-      if (jQuery(this).scrollTop() > offset) {
-        jQuery('.progress-wrap').addClass('active-progress');
-      } else {
-        jQuery('.progress-wrap').removeClass('active-progress');
-      }
-    });
-    jQuery('.progress-wrap').on('click', function (event) {
-      event.preventDefault();
-      jQuery('html, body').animate({ scrollTop: 0 }, duration);
-      return false;
-    })
-
-
-  });
-
-})(jQuery);
+var progressPath = document.querySelector('.progress-wrap path');
+var pathLength = progressPath.getTotalLength();
+progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+progressPath.style.strokeDashoffset = pathLength;
+progressPath.getBoundingClientRect();
+progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+var updateProgress = function () {
+  var scroll = $(window).scrollTop();
+  var height = $(document).height() - $(window).height();
+  var progress = pathLength - (scroll * pathLength / height);
+  progressPath.style.strokeDashoffset = progress;
+}
+updateProgress();
+$(window).scroll(updateProgress);
+var offset = 50;
+var duration = 0;
+jQuery(window).on('scroll', function () {
+  if (jQuery(this).scrollTop() > offset) {
+    jQuery('.progress-wrap').addClass('active-progress');
+  } else {
+    jQuery('.progress-wrap').removeClass('active-progress');
+  }
+});
+jQuery('.progress-wrap').on('click', function (event) {
+  event.preventDefault();
+  jQuery('html, body').animate({ scrollTop: 0 }, duration);
+  return false;
+})
 // Scroll to top Progress
 
 
@@ -228,7 +202,26 @@ function updateProgressbar() {
 }
 // MultiStep Registration Form
 
+// Download Pdf File 
 
+document.getElementById("DownloadPdf")
+addEventListener("click", () => {
+  const watrMark = document.getElementById("WaterMark");
+  const invoice = this.document.getElementById("PrintDownload");
+  // watrMark.style.display = "block";
+  watrMark.style.filter = "grayscale(100%)";
+  watrMark.style.opacity = "20%";
+
+  console.log(invoice);
+  console.log(window);
+  var opt = {
+    margin: 1,
+    filename: 'myfile.pdf',
+    image: { type: 'pdf' },
+  };
+  html2pdf().from(invoice).set(opt).save();
+})
+// Download Pdf File 
 
 // Phone Number Picker 
 var input = document.querySelector("#phonee");

@@ -225,20 +225,22 @@
 }
 
 .PrintWaterMark {
-    display: none;
-    /* height: 300px; */
-    /* width: 300px; */
+    /* display: none; */
     position: absolute;
     top: 60%;
     z-index: -1;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-35deg) scale(4.5);
-    filter: opacity(20%) grayscale(100%);
+    filter: opacity(0%) grayscale(100%);
 }
 
 @media print {
+    .PrntBtnMain {
+        display: none;
+    }
+
     .PrintWaterMark {
-        display: block;
+        filter: opacity(20%) grayscale(100%);
     }
 
     .PrintPreview {
