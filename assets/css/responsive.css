@@ -10,6 +10,28 @@
     .post-content {
         font-size: 12px;
     }
+
+
+    /* Print Preview Page */
+    .PrintPreview {
+        padding: 5px;
+    }
+
+    .PrintPreviewPic {
+        height: 90px;
+        width: 90px;
+    }
+
+    .PdataBox {
+        margin: 0px;
+    }
+
+    .ProfileInfoList li {
+        padding: 4px 0px 4px 0px;
+        font-size: 14px;
+    }
+
+    /* Print Preview Page */
 }
 
 @media (min-width: 768px) {
@@ -233,6 +255,8 @@
     transform: translate(-50%, -50%) rotate(-35deg) scale(4.5);
     filter: opacity(0%) grayscale(100%);
 }
+
+
 
 @media print {
     .PrntBtnMain {
