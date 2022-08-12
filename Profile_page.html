@@ -363,7 +363,8 @@
 							<h5 class="text-center black-text"> সেটিং </h5>
 						</div>
 						<div class="boxData p-2">
-							<p class="mt-0 py-1  px-2"> <a href=""> <i class="fa-solid fa-file-pen"></i> আপডেট প্রোফাইল
+							<p class="mt-0 py-1  px-2" data-bs-toggle="modal" data-bs-target="#ProfileUpdate"> <a
+									href="#"> <i class="fa-solid fa-file-pen"></i> আপডেট প্রোফাইল
 								</a>
 							</p>
 							<p class="mt-2 py-1 px-2"> <a href="ChangePassword.html"> <i
@@ -372,8 +373,6 @@
 								</a>
 							</p>
 						</div>
-
-
 					</div>
 
 				</div>
@@ -381,6 +380,537 @@
 		</div>
 	</section>
 	<!--<<<<<<< User Profile <<<<<<<<< -->
+
+
+
+	<!-- Profile Update Modal -->
+	<div class="modal fade" id="ProfileUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content ProfileUpdateModalContent">
+
+
+
+
+				<!-- SignnUp Form Main -->
+				<section class="singIn-Singup-Form py-5">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-10 col-12 offset-md-1">
+								<form action="#" class="form  p-2" style="border: 0;">
+
+									<!-- Basic info -->
+									<div class="form-step d-block form-step-active">
+										<div class="row">
+											<h1 class="text-center my-3"> প্রাথমিক তথ্য </h1>
+
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="MobileNo">মোবাইল নংঃ </label>
+													<input id="phonee" name="phone" type="number" required>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="Email"> ই-মেইলঃ </label>
+													<input id="EmailInput" name="e-mail" type="email"
+														placeholder="Your E-mail Here (Optional)">
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="password"> পাসওয়ার্ডঃ </label>
+													<input id="passwordInput" name="password" type="password"
+														placeholder="Create a Password Minimum 8 Characters">
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="ForUser"> কার জন্য রেজিষ্ট্রেশন
+														করছেন? </label>
+													<select id="ForUserInput" class="signUp-select">
+														<option selected> নিজের জন্য </option>
+														<option> ছেলের জন্য </option>
+														<option> মেয়ের জন্য </option>
+														<option> ভাইয়ের জন্য </option>
+														<option> বোনের জন্য </option>
+														<option> বন্ধুর জন্য </option>
+													</select>
+												</div>
+											</div>
+
+
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="Religion"> ধর্ম </label>
+													<select id="SelectReligion" class="signUp-select">
+														<option class="cls" disabled selected> ধর্ম নির্বাচন
+															করুন</option>
+														<option> ইসলাম </option>
+														<option> হিন্দু </option>
+														<option> বৌদ্ধ </option>
+														<option> খ্রিষ্টান </option>
+
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="Gender"> লিঙ্গ </label>
+													<select id="SelectGender" class="signUp-select">
+														<option disabled selected> লিঙ্গ নির্বাচন করুন </option>
+														<option> পুরুষ </option>
+														<option> মহিলা </option>
+
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Basic info -->
+									<hr>
+									<!-- Personal Info -->
+									<div class="form-step d-block">
+
+										<div class="row g-3">
+											<h1 class="text-center my-3"> ব্যক্তিগত তথ্য </h1>
+
+											<div class="col-md-6 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="SignUpName"> নাম </label>
+													<input id="NameInput" name="SignUpName" type="text"
+														placeholder="পাত্র/পাত্রীর নাম লিখুন">
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="Age"> বয়স </label>
+													<select id="Age" class="signUp-select age">
+														<option selected> </option>
+
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="education"> শিক্ষাগত যোগ্যতা
+													</label>
+													<select id="Education" class="signUp-select">
+														<option class="cls" disabled selected> শিক্ষাগত যোগ্যতা
+														</option>
+														<option> নাই </option>
+														<option> পঞ্চম শ্রেণী </option>
+														<option> অষ্টম শ্রেণী </option>
+														<option> এস এস সি </option>
+														<option> এইস এস সি </option>
+														<option> ডিগ্রী </option>
+														<option> অনার্স </option>
+														<option> মাষ্টার্স </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="education"> পেশা </label>
+													<select id="Education" class="signUp-select">
+														<option class="cls" disabled selected> নাই </option>
+														<option> সরকারি চাকুরীজীবি </option>
+														<option> বেসরকারী চাকুরীজীবি </option>
+
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="height"> উচ্চতা </label>
+													<select id="Height" class="signUp-select">
+														<option class="cls" selected> ৪' 6" </option>
+														<option> 4' 8" </option>
+														<option> 5' </option>
+														<option> 5' 2" </option>
+														<option> 5' 4" </option>
+														<option> 5'6" </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="skin_Color"> গায়ের রং </label>
+													<select id="SkinColor" class="signUp-select">
+														<option class="cls" selected> ফর্সা </option>
+														<option> শ্যামলা </option>
+														<option> কালো </option>
+														<option> গোলাপী </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="health"> স্বাস্থ্য </label>
+													<select id="Health" class="signUp-select">
+														<option class="cls" selected> মোঠা </option>
+														<option> হালকা </option>
+														<option> মিডিয়াম </option>
+														<option> পেট মোঠা </option>
+
+													</select>
+												</div>
+											</div>
+
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="MaritialStatus"> বৈবাহিক অবস্থা
+													</label>
+													<select id="SelectMS" class="signUp-select"
+														onchange="displayDivDemo('hideValuesOnSelect', this)">
+														<option value="" class="cls" selected> অবিবাহিত</option>
+														<option value="2"> বিবাহিত </option>
+														<option value="3"> বিধবা </option>
+														<option value="4"> ডিভোর্স </option>
+
+													</select>
+												</div>
+											</div>
+											<div id="hideValuesOnSelect" class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="Child"> সন্তানাদি</label>
+													<select id="SelectChild" class="signUp-select">
+														<option value="0" class="cls" selected> নাই </option>
+														<option value="1"> ১ জন </option>
+														<option value="2"> ২ জন </option>
+														<option value="3"> ৩ জন </option>
+														<option value="4"> ৪ জন </option>
+
+													</select>
+												</div>
+											</div>
+
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="User_Oversease"> বিদেশি কি
+														না?</label>
+													<select id="BG_Oversease" class="signUp-select">
+														<option class="cls" selected> না </option>
+														<option> লিগ্যাল লন্ডনী </option>
+														<option> ইল্লিগ্যাল লন্ডনী </option>
+														<option> ইউকে শরণার্থী </option>
+														<option> ইউকে স্টুডেন্ট </option>
+
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Personal Info -->
+									<hr>
+									<!-- Familial Info -->
+									<div class="form-step d-block">
+
+										<div class="row g-3">
+											<h1 class="text-center my-3"> পারিবারিক তথ্য ও ঠিকানা </h1>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="parents"> পিতা-মাতা </label>
+													<select id="SelectParents" class="signUp-select">
+														<option value="0" class="cls" selected> উভয় জীবিত </option>
+														<option value="1"> বাবা মৃত </option>
+														<option> মাতা মৃত </option>
+
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="siblings"> ভাই বোন </label>
+													<select id="SelectSiblings" class="signUp-select">
+														<option value="0" selected> ২জন </option>
+														<option value="1"> ৩ জন </option>
+														<option> ৪ জন </option>
+														<option> ৫ জন </option>
+														<option> ৬ জন </option>
+
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="clan"> বংশ </label>
+													<select id="SelectClan" class="signUp-select">
+														<option value="0" selected> তালুকদার </option>
+														<option value="1"> চৌধুরী </option>
+														<option> সৈয়দ </option>
+														<option> মোড়ল </option>
+														<option> চক্রবর্তী </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="FamilyOverses"> পরিবারের কেউ বিদেশি
+													</label>
+													<select id="FamilyOverses" class="signUp-select">
+														<option value="0" selected> না </option>
+														<option value="1"> কাতার </option>
+														<option> দুবাই </option>
+														<option> লন্ডন </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="District"> জেলা </label>
+													<select id="District" class="signUp-select">
+														<option value="0" selected disabled> জেলা নির্বাচন করুন
+														</option>
+														<option value="1"> হবিগঞ্জ </option>
+														<option> মৌলভীবাজার </option>
+														<option> সুনামগঞ্জ </option>
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="Upzila"> উপজেলা </label>
+													<select id="Upzila" class="signUp-select">
+														<option value="0" selected disabled> উপজেলা নির্বাচন করুন
+														</option>
+														<option value="1"> কানাইঘাট </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="Presents_Add"> বর্তমান ঠিকানা
+													</label>
+													<select id="PresentsAdd" class="signUp-select">
+														<option value="0" selected disabled> বর্তমান ঠিকানা নির্বাচন
+															করুন </option>
+														<option value="1"> গোয়াইনঘাট </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="HouseType"> বাসার ধরন
+													</label>
+													<select id="HouseType" class="signUp-select">
+														<option value="0" selected disabled> বাসার ধরন নির্বাচন করুন
+														</option>
+														<option value="1"> ভাড়া বাসা </option>
+														<option value=2"> ভাড়া বাসা </option>
+														<option value="3"> ভাড়া বাসা </option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Familial Info -->
+									<hr>
+									<!-- Demand User -->
+									<div class="form-step d-block">
+
+										<div class="row g-3">
+											<h1 class="text-center my-3"> চাহিদা </h1>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_local"> দেশি হলে </label>
+													<select id="DmnInCountry" class="signUp-select">
+														<option value="0" selected> সরকারী চাকুরীজীবি </option>
+														<option value="1"> বিসি.এস ক্যাডার </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D-Oversease"> বিদেশি হলে </label>
+													<select id="DmnOversease" class="signUp-select">
+														<option value="0" selected> শুধু লন্ডনী </option>
+														<option value="1"> লাগবে না </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_MaritialStatus"> বৈবাহিক অবস্থা
+													</label>
+													<select id="DmnMaritialStatus" class="signUp-select">
+														<option value="0" selected> অবিবাহিত </option>
+														<option value="1"> বিবাহিত </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_Children"> বাচ্চাসহ </label>
+													<select id="DmnChildren" class="signUp-select">
+														<option value="0" selected> হবে না </option>
+														<option value="1"> হবে </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_Height"> উচ্চতা কমপক্ষে </label>
+													<select id="DmnHeight" class="signUp-select">
+														<option value="0" selected> ৫' ২" </option>
+														<option value="1"> ৫' ৪" </option>
+
+
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_Age"> বয়স </label>
+													<select id="DmnAge" class="signUp-select">
+														<option value="0" selected> ১৮ </option>
+														<option value="1"> ২০ </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="MinEducation"> শিক্ষা কমপক্ষে
+													</label>
+													<select id="DmnEducation" class="signUp-select">
+														<option value="0" selected> এস এস সি </option>
+														<option value="1"> এইচ এস সি </option>
+													</select>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_area"> এলাকা
+													</label>
+													<select id="DmnArea" class="signUp-select">
+														<option value="0" selected> যেকোন এলাকা </option>
+														<option value="1"> শহর </option>
+														<option value=2"> গ্রাম </option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- Demand User -->
+									<hr>
+									<!-- Demand User -->
+									<div class="form-step d-block">
+
+										<div class="row g-3">
+											<h1 class="text-center my-3"> যোগাযোগ </h1>
+
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_W_Number"> ওয়াটসআপ নাম্বার
+													</label>
+													<input id="DmnWNumber" name="D_W_Number" type="Tel"
+														placeholder="ওয়াটসআপ নাম্বার লিখুন">
+												</div>
+											</div>
+											<div class="col-md-6 col-6">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_F_Link"> ফেসবুক লিংক </label>
+													<input id="DmnFLink" name="D_F_Link" type="text"
+														placeholder="ফেসবুক আইডি লিংক পেস্ট করুন">
+												</div>
+											</div>
+											<div class="col-md-12 col-12">
+												<div class="input-group my-2">
+													<label class="field_label" for="D_F_Link"> আপনার কিছু কথা লিখুন
+													</label>
+													<textarea name="" id="" cols="30" rows="6"></textarea>
+
+												</div>
+											</div>
+										</div>
+
+
+									</div>
+									<!-- Demand User -->
+									<hr>
+									<!-- Contact Form -->
+									<div class="form-step d-block">
+
+										<div class="row g-3">
+											<div class="container ">
+
+												<div class="ImageShow d-flex justify-content-center">
+													<div class="wrapper">
+														<div class="image" onclick="defaultBtnActive()">
+															<img class="showImg" src="" alt="">
+														</div>
+														<div class="content">
+															<div class="icon">
+																<i class="fas fa-cloud-upload-alt"></i>
+															</div>
+															<div class="text-center">
+																৩০০x৩০০ সাইজের ছবি <br> আপলোড করুন
+															</div>
+														</div>
+														<div id="cancel-btn">
+															<i class="fa-solid fa-xmark"></i>
+														</div>
+													</div>
+												</div>
+												<button onclick="defaultBtnActive()" id="custom-btn"> ছবি আপলোড করুন
+												</button>
+												<input id="default-btn" type="file" hidden>
+											</div>
+										</div>
+									</div>
+									<!-- Contact Form -->
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- SignnUp Form Main -->
+
+
+				<div class="btns-group py-3 text-end me-4 ">
+					<a href="#" class="btn upProfileBtn pBtnCancel white-text" data-bs-dismiss="modal"> <i
+							class="fa-solid fa-xmark"></i> বাতিল
+						করুন</a>
+					<a href="#" class="btn upProfileBtn pBtnSave white-text"> <i class="fa-solid fa-floppy-disk"></i>
+						সংরক্ষণ করুন</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Profile Update Modal -->
 
 
 	<!--<<<<<<< Footer  Start <<<<<<<<< -->

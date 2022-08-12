@@ -1482,6 +1482,23 @@ select {
 /*Pass Recovery Page*/
 
 
+/* Profile Update Section */
+.ProfileUpdateModalContent {
+	height: 90vh;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+.pBtnCancel {
+	background-color: var(--primary-color);
+}
+
+.pBtnSave {
+	background-color: var(--secondery-color);
+}
+
+/* Profile Update Section */
+
 /* Footer */
 .footer {
 	background: #001d40 url(../images/map-bg-1.png);

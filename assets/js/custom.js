@@ -1,5 +1,16 @@
 
 
+function codespeedy() {
+  var print_div = document.getElementById("PrintDownload");
+  var print_area = window.open();
+  print_area.document.write(print_div.innerHTML);
+  print_area.document.close();
+  print_area.focus();
+  print_area.print();
+}
+
+
+
 // Sticky Top bar
 var lastScrollTop = 0;
 navbar = document.getElementById("topBar");
@@ -203,24 +214,23 @@ function updateProgressbar() {
 // MultiStep Registration Form
 
 // Download Pdf File 
-
 document.getElementById("DownloadPdf")
-addEventListener("click", () => {
-  const watrMark = document.getElementById("WaterMark");
-  const invoice = this.document.getElementById("PrintDownload");
-  // watrMark.style.display = "block";
-  watrMark.style.filter = "grayscale(100%)";
-  watrMark.style.opacity = "20%";
+  .addEventListener("click", () => {
+    const watrMark = document.getElementById("WaterMark");
+    const invoice = this.document.getElementById("PrintDownload");
+    // watrMark.style.display = "block";
+    watrMark.style.filter = "grayscale(100%)";
+    watrMark.style.opacity = "20%";
 
-  console.log(invoice);
-  console.log(window);
-  var opt = {
-    margin: 1,
-    filename: 'myfile.pdf',
-    image: { type: 'pdf' },
-  };
-  html2pdf().from(invoice).set(opt).save();
-})
+    console.log(invoice);
+    console.log(window);
+    var opt = {
+      margin: 1,
+      filename: 'myfile.pdf',
+      image: { type: 'pdf' },
+    };
+    html2pdf().from(invoice).set(opt).save();
+  })
 // Download Pdf File 
 
 // Phone Number Picker 
@@ -297,6 +307,40 @@ defaultBtn.addEventListener("change", function () {
   }
 });
 // Registration Image Upload JS
+
+
+
+// var finalEnglishToBanglaNumber = {
+//   0: "০",
+//   1: "১",
+//   2: "২",
+//   3: "৩",
+//   4: "৪",
+//   5: "৫",
+//   6: "৬",
+//   7: "৭",
+//   8: "৮",
+//   9: "৯",
+// };
+
+// String.prototype.getDigitBanglaFromEnglish = function () {
+//   var retStr = this;
+//   for (var x in finalEnglishToBanglaNumber) {
+//     retStr = retStr.replace(
+//       new RegExp(x, "g"),
+//       finalEnglishToBanglaNumber[x]
+//     );
+//   }
+//   return retStr;
+// };
+
+// var english_number = "123456";
+
+// var bangla_converted_number = english_number.getDigitBanglaFromEnglish();
+
+// //outputs : ১২৩৪৫৬
+
+// console.log(bangla_converted_number); //or alert(bangla_converted_number);\
 
 
 

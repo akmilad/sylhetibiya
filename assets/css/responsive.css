@@ -31,6 +31,25 @@
         font-size: 14px;
     }
 
+    .printViewLogo {
+        height: 40%;
+    }
+
+    .PreviewHeader {
+        height: 110px;
+    }
+
+    /* Print Preview Page */
+}
+
+@media (min-width: 576px) {
+
+    /* Print Preview Page */
+    .modal-dialog {
+        max-width: 1100px;
+        margin: 1.75rem auto;
+    }
+
     /* Print Preview Page */
 }
 
@@ -269,6 +288,14 @@
 
     .PrintPreview {
         padding: 20px;
+    }
+
+    #signUpForm {
+        display: none;
+    }
+
+    .closeBtnPopup {
+        display: none !important;
     }
 
 

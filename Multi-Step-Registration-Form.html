@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="assets/css/intlTelInput.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script src="assets/js/html2pdf.bundle.js"></script>
 	<script src="assets/js/jquery-3.6.0.min.js"></script>
 
 
@@ -81,8 +82,8 @@
 	</section>
 
 
-
-	<section class="singIn-Singup-Form py-5">
+	<!-- SignnUp Form Main -->
+	<section id="signUpForm" class="singIn-Singup-Form py-5">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-12 offset-md-2">
@@ -593,8 +594,8 @@
 
 							<div class="row g-3">
 								<div class="container ">
-									<div class="preview-btn"> <a href="PreviewPage.html"> Preview </a
-											href="PreviewPage.html"> </div>
+									<div class="preview-btn"> <a data-bs-toggle="modal" data-bs-target="#PreviewModal"
+											href="# "> Preview </a href="PreviewPage.html"> </div>
 									<div class="ImageShow d-flex justify-content-center">
 										<div class="wrapper">
 											<div class="image" onclick="defaultBtnActive()">
@@ -628,6 +629,8 @@
 			</div>
 		</div>
 	</section>
+	<!-- SignnUp Form Main -->
+
 
 	<!--<<<<<<< Footer  Start <<<<<<<<< -->
 	<section class="footer py-4">
@@ -703,6 +706,221 @@
 	</div>
 	<!--Scrool to top Progress-->
 
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="PreviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="closeBtnPopup d-flex"> <span data-bs-dismiss="modal"> <i class="fa-solid fa-xmark"></i>
+					</span> </div>
+				<section class="PrntBtnMain mt-4">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3 offset-md-9">
+								<div class="PrntDownload">
+									<button class="prntBtn mx-1 py-1 px-2" onclick="window.print()"> <i
+											class="fa-solid fa-print me-2"></i>Print</button>
+									<button class="downloadBtn mx-1 py-1 px-2" id="DownloadPdf"> <i
+											class="fa-solid fa-download me-2"></i>Download</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!--<<<<<<< PrintPreview <<<<<<<<< -->
+				<section class="PrintPreview py-4" id="PrintDownload">
+
+					<div class="PrintWaterMark" id="WaterMark">
+						<img src="assets/images/logo2.png" alt="">
+					</div>
+
+					<div class="PreviewHeader">
+
+						<div class="PviewProfileLogo pbBoxShadow">
+							<img class="printViewLogo" src="assets/images/logo2.png" alt="">
+							<p class="black-text"><span>একাউন্ট তৈরি:</span>
+								<span>নিজের জন্য</span>
+							</p>
+						</div>
+
+
+						<div class="PviewProfilepic pbBoxShadow">
+							<div class="ImagId">
+								<img class="PrintPreviewPic" src="assets/images/user/user1.jpg" alt="">
+								<h5 class="L_infoProHead black-text mt-2"> <span>ID: </span>
+									<span>SB8889</span>
+								</h5>
+							</div>
+						</div>
+					</div>
+					<hr>
+
+					<div class="PrintPreviewData d-grid">
+						<div class=" PdataBox p-2">
+							<h5 class="L_infoProHead black-text py-2" style="border-bottom: 1px solid #999;">
+								<b>প্রাথমিক তথ্য</b>
+							</h5>
+							<ul class="ProfileInfoList" style="border: 0;">
+								<li>
+									<span> <span> &#9672;</span> <b> নামঃ </b> </span> <span>
+										অনুপম তালুকদার </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b>বয়সঃ</b>
+									</span> <span> ২৩ </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> ধর্মঃ
+										</b></span>
+									<span> হিন্দু</span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> বৈবাহিক অবস্থাঃ
+										</b></span>
+									<span> অবিবাহিত </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> মোবাইলঃ
+										</b></span>
+									<span> 01815652011 </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> ই-মেইলঃ
+										</b></span>
+									<span> abc@gmail.com </span>
+								</li>
+
+							</ul>
+
+						</div>
+						<div class=" PdataBox p-2">
+							<h5 class="L_infoProHead black-text py-2" style="border-bottom: 1px solid #999;">
+								<b> ব্যক্তিগত তথ্য </b>
+							</h5>
+							<ul class="ProfileInfoList" style="border: 0;">
+								<li>
+									<span> <span> &#9672;</span> <b> পেশা: </b> </span> <span>
+										সরকারী চাকুরীজীবি </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> উচ্চতাঃ
+										</b></span>
+									<span> ৫’৬” </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b>শিক্ষাগত
+											যোগ্যতা:</b>
+									</span> <span> বিএ </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> বিদেশি কি না?
+										</b></span>
+									<span> না </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> গায়ের রংঃ
+										</b></span>
+									<span> শ্যামরা</span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> স্বাস্থ্যঃ
+										</b></span>
+									<span> মোটা </span>
+								</li>
+							</ul>
+
+						</div>
+						<div class=" PdataBox p-2">
+							<h5 class="L_infoProHead black-text py-2" style="border-bottom: 1px solid #999;">
+								<b> পারিবারিক তথ্য </b>
+							</h5>
+							<ul class="ProfileInfoList" style="border: 0;">
+								<li>
+									<span> <span> &#9672;</span> <b> পিতা-মাতাঃ </b> </span> <span>
+										উভয় জীবিত </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> ভাই-বোনঃ </b>
+									</span> <span> ২জন </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> বংশঃ </b></span>
+									<span> তালুকদার </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> পরিবারের কেউ বিদেশি কি না? </b></span>
+									<span> নাই </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> জেলাঃ </b></span>
+									<span> সিলেটি </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> উপজেলাঃ </b></span>
+									<span> কানাইঘাট </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> বর্তমান ঠিকানাঃ </b></span>
+									<span> সিলেট শহর </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> বাসার ধরনঃ </b></span>
+									<span> ভাড়া বাসা </span>
+								</li>
+							</ul>
+
+						</div>
+						<div class=" PdataBox p-2">
+							<h5 class="L_infoProHead black-text py-2" style="border-bottom: 1px solid #999;">
+								<b> চাহিদা</b>
+							</h5>
+							<ul class="ProfileInfoList" style="border: 0;">
+								<li>
+									<span> <span> &#9672;</span> <b> দেশি হলেঃ </b> </span> <span>
+										সরকারী চাকুরীজীবি </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> বিদেশি হলেঃ </b>
+									</span> <span> লন্ডনী </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> বৈবাহিক অবস্থাঃ </b></span>
+									<span> অবিবাহিত </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> সন্তানাদিঃ </b></span>
+									<span> থাকলে হবে না </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> উচ্চতা কমপক্ষেঃ </b></span>
+									<span> ৫’২” </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> বয়স সর্বোচ্চঃ </b></span>
+									<span> ৩০ </span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> </i> <b> শিক্ষা কমপক্ষেঃ </b></span>
+									<span> এসএসসি</span>
+								</li>
+								<li>
+									<span> <span> &#9672;</span> <b> এলাকাঃ </b></span>
+									<span> গ্রাম </span>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+
+
+				</section>
+				<!--<<<<<<< PrintPreview <<<<<<<<< -->
+
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
 
 
 
