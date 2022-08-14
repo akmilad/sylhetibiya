@@ -1499,6 +1499,48 @@ select {
 
 /* Profile Update Section */
 
+/* TopBar UserIcon */
+.userIconLink {
+	height: 40px;
+	width: 40px;
+}
+
+.userControl {
+	right: 2%;
+	display: none;
+	border-radius: 4px;
+	width: 120px;
+	box-shadow: 0px 0px 4px 0px #777;
+
+}
+
+.userControl::before {
+	position: absolute;
+	font: var(--fa-font-solid);
+	content: "\f0d8";
+	font-size: 24px;
+	color: #fff;
+	right: 13%;
+	top: -14%;
+}
+
+.ctrlBoxList {
+	background: #f3f3f3;
+}
+
+/* TopBar UserIcon */
+
+
+
+
+/* After Login Page  */
+.multi-search-AfterLogin {
+	box-shadow: 0px 0px 5px -1px #999;
+}
+
+/* After Login Page  */
+
+
 /* Footer */
 .footer {
 	background: #001d40 url(../images/map-bg-1.png);

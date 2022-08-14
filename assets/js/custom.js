@@ -1,4 +1,10 @@
 
+// UserProfile Icon
+$("#userBtn").click(function () {
+  $("#usrCtrlBox").slideToggle(200);
+});
+// UserProfile Icon
+
 
 function codespeedy() {
   var print_div = document.getElementById("PrintDownload");
@@ -12,6 +18,7 @@ function codespeedy() {
 
 
 // Sticky Top bar
+var userControlBox = document.getElementById("usrCtrlBox");
 var lastScrollTop = 0;
 navbar = document.getElementById("topBar");
 window.addEventListener("scroll", function () {
@@ -19,6 +26,7 @@ window.addEventListener("scroll", function () {
     .documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
     navbar.style.top = "-80px";
+    userControlBox.style.display = "none";
   }
   else {
     navbar.style.top = "0";
