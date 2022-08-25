@@ -1,4 +1,5 @@
 
+
 // UserProfile Icon
 $("#userBtn").click(function () {
   $("#usrCtrlBox").slideToggle(200);
@@ -6,14 +7,24 @@ $("#userBtn").click(function () {
 // UserProfile Icon
 
 
-function codespeedy() {
-  var print_div = document.getElementById("PrintDownload");
-  var print_area = window.open();
-  print_area.document.write(print_div.innerHTML);
-  print_area.document.close();
-  print_area.focus();
-  print_area.print();
-}
+$("#WhathappIcon").click(function () {
+  $("#chatBox").toggleClass("ShowChatBox");
+
+});
+$("#closeChat").click(function () {
+  $("#chatBox").removeClass("ShowChatBox");
+});
+
+
+
+// function codespeedy() {
+//   var print_div = document.getElementById("PrintDownload");
+//   var print_area = window.open();
+//   print_area.document.write(print_div.innerHTML);
+//   print_area.document.close();
+//   print_area.focus();
+//   print_area.print();
+// }
 
 
 
@@ -226,10 +237,12 @@ document.getElementById("DownloadPdf")
   .addEventListener("click", () => {
     const watrMark = document.getElementById("WaterMark");
     const invoice = this.document.getElementById("PrintDownload");
+
+
+    PrintLi.style.background = "red";
     // watrMark.style.display = "block";
     watrMark.style.filter = "grayscale(100%)";
     watrMark.style.opacity = "20%";
-
     console.log(invoice);
     console.log(window);
     var opt = {

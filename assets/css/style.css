@@ -53,8 +53,23 @@ body {
 	background: var(--white);
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
+
+
+.preeloader {
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	z-index: 9999999;
+	background-color: #fff;
+}
 
 /* Global Style  */
 p,
@@ -1619,11 +1634,59 @@ select {
 
 /* Reveal Effect */
 
+
+/* WhatsApp Btn */
+.WhatsAppBTn {
+	position: fixed;
+	right: 50px;
+	bottom: 14%;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	border-radius: 50px;
+	z-index: 10000;
+	background-color: #44BE53;
+}
+
+.WhatsappChat {
+	position: fixed;
+	bottom: 20%;
+	right: 8%;
+	z-index: 99999;
+
+}
+
+.chatBox {
+	width: 300px;
+	background-color: #E0F6CA;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 0px #777;
+}
+
+.chatBoxHead {
+	background-color: #44BE53;
+}
+
+.whtMessage {
+	border-radius: 8px 0px 8px 8px;
+}
+
+.chatBoxContainer {
+	visibility: hidden;
+}
+
+.ShowChatBox {
+	visibility: visible;
+}
+
+/* WhatsApp Btn */
+
+
 /* Top Scroll Progress */
 .progress-wrap {
 	position: fixed;
 	right: 50px;
-	bottom: 50px;
+	bottom: 5%;
 	height: 46px;
 	width: 46px;
 	cursor: pointer;

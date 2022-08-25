@@ -261,6 +261,9 @@
     /* Carousel Navigator */
 }
 
+
+
+
 .PrintPreview {
     position: relative;
 }
@@ -278,6 +281,14 @@
 
 
 @media print {
+    .top-bar-main {
+        display: none;
+    }
+
+    .emergeny-notice {
+        display: none;
+    }
+
     .PrntBtnMain {
         display: none;
     }
